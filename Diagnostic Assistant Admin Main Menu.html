@@ -1,0 +1,2414 @@
+<html>
+   <head>
+      <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title></title>
+      <style id="MenuScriptStyle">
+    spanhelp { background:#def3ca; padding:3px; float:left; }
+    .arrow-up {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+
+      border-bottom: 10px solid black;
+    }
+
+    .arrow-down {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+
+      border-top: 10px solid black;
+      }
+      
+    /* This CSS is used for the Show/Hide functionality. */
+   .more {
+      display: none;
+      border-top: 1px solid #666;
+      border-bottom: 1px solid #666; }
+   .more2 {display: none; }
+   a.showLink, a.hideLink {
+      text-decoration: none;
+      color: #36f;
+      padding-left: 8px;
+      background: transparent url(down.gif) no-repeat left; }
+   a.hideLink {
+      background: transparent url(up.gif) no-repeat left; }
+   a.showLink:hover, a.hideLink:hover {
+      border-bottom: 1px dotted #36f; }   
+  </style>
+      <style type="text/css" id="internalStyle">
+      
+/*
+  Copyright 2002, 2011, Oracle and/or its affiliates. All rights reserved.
+  file: blafdoc.css     Version: 2011.10.7
+*/
+
+body {
+  font-family: Tahoma, sans-serif;
+  color: black;
+  background-color: white;
+  font-size: small;
+}
+* html body {
+  /* http://www.info.com.ph/~etan/w3pantheon/style/modifiedsbmh.html */
+  font-size: x-small; /* for IE5.x/win */
+  f\ont-size: small;  /* for other IE versions */
+}
+
+h1 {
+  font-size: 165%;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+
+h2 {
+  color:#336699;
+  font-size: 152%;
+  font-weight: bold;
+}
+
+h3 {
+  color:#336699;
+  font-size: 139%;
+  font-weight: bold;
+}
+
+h4 {
+  color:#336699;
+  font-size: 126%;
+  font-weight: bold;
+}
+
+h5 {
+  color:#336699;
+  font-size: 113%;
+  font-weight: bold;
+  display: inline;
+}
+
+h6 {
+  color:black;
+  font-size: 100%;
+  font-weight: bold;
+  font-style: italic;
+  display: inline;
+}
+
+a:link {
+  color: #039;
+  background: inherit;
+}
+
+a:visited {
+  color: #72007C;
+  background: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a img, img[usemap] {
+  border-style: none;
+}
+
+code, samp, tt {
+  font-family: monospace;
+  font-size: 110%;
+}
+
+caption {
+  text-align: center;
+  font-weight: bold;
+  width: auto;
+}
+
+dt {
+  font-weight: bold;
+}
+
+table {
+    color: #000000;
+    font-weight: bold;
+    border-spacing: 0;
+    outline: medium none;
+font-family: Lucida Grande,Lucida Sans,Arial,sans-serif;
+font-size: 12px;
+
+}
+
+th_test {
+    background:  blue;
+    border: 1px solid #AED0EA;
+    font-size: 23px;
+    font-weight: bold;
+    color: red; 
+}
+td {
+    background: #F2F5F7;
+    border: 1px solid #AED0EA;
+    font-weight: normal;
+    padding: 5;
+}
+
+.td_output {
+   color: #000000;
+   background: #E0E0E0;
+   border: 1px solid #AED0EA;
+   font-family: Lucida Grande,Lucida Sans,Arial,sans-serif;
+   font-size: 13px;
+   font-weight: normal;
+   padding: 1;
+}
+
+.td_column2 {
+    background: #F2F5F7;
+    border: 1px solid #AED0EA;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    color:#336699;
+}
+
+.td_column {
+    background: #D7EBF9;
+    border: 1px solid #AED0EA;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.td_title {
+
+ background: #F2F5F7;
+    border: 0px solid #AED0EA;
+    font-weight: normal;
+    padding: 5;
+}
+
+pre {
+ overflow-x: auto; /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+ white-space: pre-wrap; /* css-3 */
+ white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+ white-space: -pre-wrap; /* Opera 4-6 */
+ white-space: -o-pre-wrap; /* Opera 7 */
+ /* width: 99%; */
+ word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol {
+  list-style-type: lower-roman;
+}
+
+td p:first-child, td pre:first-child {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+table.table-border {
+  border-collapse: collapse;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+table.table-border th {
+  padding: 0.5ex 0.25em;
+  color: black;
+  background-color: #f7f7ea;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+table.table-border tr {
+  padding: 0.5ex 0.25em;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+table.table-border td {
+  padding: 0.5ex 0.25em;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+span.gui-object, span.gui-object-action {
+  font-weight: bold;
+}
+
+span.gui-object-title { }
+
+p.horizontal-rule {
+  width: 100%;
+  border: solid #cc9;
+  border-width: 0px 0px 1px 0px;
+  margin-bottom: 4ex;
+}
+
+div.zz-skip-header {
+  display: none;
+}
+
+td.zz-nav-header-cell {
+  text-align: left;
+  font-size: 95%;
+  width: 99%;
+  color: black;
+  background: inherit;
+  font-weight: normal;
+  vertical-align: top;
+  margin-top: 0ex;
+  padding-top: 0ex;
+}
+
+a.zz-nav-header-link {
+  font-size: 95%;
+}
+
+td.zz-nav-button-cell {
+  white-space: nowrap;
+  text-align: center;
+  width: 1%;
+  vertical-align: top;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 0ex;
+  padding-top: 0ex;
+}
+
+a.zz-nav-button-link {
+  font-size: 90%;
+}
+
+div.zz-nav-footer-menu {
+  width: 100%;
+  text-align: center;
+  margin-top: 2ex;
+  margin-bottom: 4ex;
+}
+
+p.c9 {
+   line-height: 13.872pt;
+   margin-top: 0.0pt;
+   margin-bottom: 5.0pt;
+   margin-left: 6.0pt;
+   margin-right: 6.0pt;
+   }
+p.zz-legal-notice, a.zz-legal-notice-link {
+  font-size: 85%;
+  /* display: none; */ /* Uncomment to hide legal notice */
+}
+
+
+    </style><script type="text/javascript">
+  // Validate using: http://www.quirksmode.org/dom/w3c_html.html 
+  function showHide(divId) {
+     if (document.getElementById(divId)) {
+        if (document.getElementById(divId+'-show').style.display != 'none') {
+           document.getElementById(divId+'-show').style.display = 'none';
+           document.getElementById(divId).style.display = 'block';
+        }
+        else {
+           document.getElementById(divId+'-show').style.display = 'inline';
+           document.getElementById(divId).style.display = 'none';
+        }
+     }
+  }
+  
+  function toggleHelp(id) {
+     var de = document.getElementById(id);
+     if(de.style.display == 'block')
+        de.style.display = 'none';
+     else
+        de.style.display = 'block';
+  }
+ </script>
+   </head>
+   <body><a name="TOP"></a><img border="0" src="http://www.oracleimg.com/us/assets/oralogo-small.gif" alt="Oracle Corp. and/or its affiliates.">
+      <div align="center">
+         <h3>Oracle Diagnostic Assistant Admin Main Menu - Documentation </h3>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="main"></a>main - Oracle Diagnostic Assistant Admin Main Menu</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+         
+  The Admin Main Menu enables you to perform limited admin functions.
+    
+  Select one of the following options:
+    (1) Manage Properties
+    (2) Data Collection History
+    (3) Diagnostic Assistant Version 
+  
+    (H)elp   (E)xit   
+   
+   </pre>
+                  <p class="c9"><a href="#" id="help1-show" class="showLink" onclick="toggleHelp('help1');"><b>[+]</b> Toggle Help</a>
+                     <div id="help1" class="more"><b>Showing Menu Help:</b>
+                        <pre>
+  Oracle Diagnostic Assistant: Admin Main Menu.   
+     
+  The Admin Main Menu enables you to perform limited admin functions.
+    
+  Explanation of available options:
+    (1) Manage Properties
+        o This selection provides options for viewing and managing 
+          property values
+        o There are currently 2 property files used by the Diagnostic Assistant
+          1) da.properties which defines common properties 
+          2) user.properties has limited functionality - it is 
+             possible that this file is empty
+        o This menu also includes an option to restore all properties back to 
+          their original default values
+          
+        Note: some properties are not defined until prompted for the first
+              time within the tool (I.e. MOS Username, CSI) or explicitly 
+              set using this menu
+
+        UNDER NO CIRCUMSTANCES MUST THE PROPERTY FILES BE MODIFIED manually. 
+        Use this Manage Properties menu to perform the modifications allowed.  
+
+    (2) Data Collection History
+        o This option provides access to view summary and detailed 
+          information of data collections performed
+        o You can view the latest OCM collection's detail or 
+          summary information.  
+        o A list of a diagnostic collections executed during the
+          current session is available for viewing
+
+    (3) Diagnostic Assistant Version
+        o This option displays the Diagnostic Assistant version number, 
+          build number and build date
+        o Also included are the versions of ADR, RDA ad OCM (if they exist)
+        o This information is helpful when logging a service request for
+          the Diagnostic Assistant or in debugging issues with
+          Development
+
+        o Make sure you have the latest version of the tool, by
+          comparing your version with latest version documented in 
+          Knowledge Article 201804.1: Diagnostic Assistant General 
+          Information (https://support.oracle.com/CSP/main/article
+          ?cmd=show&amp;type=NOT&amp;id=201804.1)
+
+  </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap1-show" class="showLink" onclick="showHide('menumap1');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap1" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:menu:AdminProp</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>AdminProp</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#AdminProp">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap1-hide" class="hideLink" onclick="showHide('menumap1');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap2-show" class="showLink" onclick="showHide('menumap2');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap2" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:menu:AdminFile</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>AdminFile</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#AdminFile">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap2-hide" class="hideLink" onclick="showHide('menumap2');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap3-show" class="showLink" onclick="showHide('menumap3');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap3" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:sys_649</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>sys_649</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#sys_649">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap3-hide" class="hideLink" onclick="showHide('menumap3');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="AdminProp"></a>AdminProp - Manage Properties</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  
+  The following options allow for viewing the properties    
+  files and managing the stored properties.
+      
+  Select one of the following options:
+    (1) View da.properties
+    (2) View user.properties 
+    (3) Set/Change User Configuration values
+    (4) Clear User Configuration values
+    (5) Allow/Disallow saving passwords
+    (6) Allow/Disallow browser viewer
+
+
+    (M)ain    (B)ack    (H)elp   (E)xit  
+   </pre>
+                  <p class="c9"><a href="#" id="help2-show" class="showLink" onclick="toggleHelp('help2');"><b>[+]</b> Toggle Help</a>
+                     <div id="help2" class="more"><b>Showing Menu Help:</b>
+                        <pre>
+  Admin Main Menu: Manage Properties Menu Help
+    
+  Explanation of available options:
+
+    (1) View da.properties
+        o displays da.properties file contents
+        o results will display on the screen page by page
+   
+    (2) View user.properties
+        o displays user.properties file contents
+        o results will display on the screen page by page
+        
+    (3) Set/Change User Configuration values
+        o Permits change of property values previously set, including
+          passwords (if applicable)
+        o Useful in case the values were incorrectly entered when 
+          initially prompted or the value has changed for any reason
+
+    (4) Clear User Configuration values
+        o Resets to the original default value for property values 
+          previously set, including passwords (if applicable)
+        o If no default defined, the value is removed
+        o Can choose to reset a single property value or ALL
+        o Does not prompt for new values; it simply removes the existing value
+          and sets it to the default value, if there is one
+    
+    (5) Allow/Disallow saving passwords
+        o By selecting this option, the 'use_wallet' property can
+          be changed to TRUE (which allows passwords to be saved in a 
+          secure Oracle wallet) or FALSE (which does not allow
+          passwords to be saved, and so the user is prompted each time).
+        o This property is set to FALSE by default
+              
+    (6) Allow/Disallow browser viewer
+        o By selecting this option, the 'browser_viewer_spawned' property can
+          be changed to TRUE.
+        o This property is set to FALSE by default
+ 
+    Note: Oracle wallet is used to secure passwords
+                  
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap4-show" class="showLink" onclick="showHide('menumap4');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap4" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:sys_651</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>sys_651</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#sys_651">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap4-hide" class="hideLink" onclick="showHide('menumap4');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap5-show" class="showLink" onclick="showHide('menumap5');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap5" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:sys_652</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>sys_652</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#sys_652">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap5-hide" class="hideLink" onclick="showHide('menumap5');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap6-show" class="showLink" onclick="showHide('menumap6');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap6" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:menu:ChangeProp</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>ChangeProp</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#ChangeProp">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap6-hide" class="hideLink" onclick="showHide('menumap6');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 4&nbsp;  - &nbsp;<a href="#" id="menumap7-show" class="showLink" onclick="showHide('menumap7');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap7" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>4:menu:ResetProp</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>ResetProp</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#ResetProp">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap7-hide" class="hideLink" onclick="showHide('menumap7');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 5&nbsp;  - &nbsp;<a href="#" id="menumap8-show" class="showLink" onclick="showHide('menumap8');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap8" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>5:command:sys_665</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>5</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>sys_665</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#sys_665">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap8-hide" class="hideLink" onclick="showHide('menumap8');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 6&nbsp;  - &nbsp;<a href="#" id="menumap9-show" class="showLink" onclick="showHide('menumap9');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap9" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>6:command:sys_666</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>6</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>sys_666</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#sys_666">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap9-hide" class="hideLink" onclick="showHide('menumap9');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap10-show" class="showLink" onclick="showHide('menumap10');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap10" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap10-hide" class="hideLink" onclick="showHide('menumap10');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap11-show" class="showLink" onclick="showHide('menumap11');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap11" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap11-hide" class="hideLink" onclick="showHide('menumap11');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="ChangeProp"></a>ChangeProp - Change User Configuration Values</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  
+  The following options allow for changing property values.
+      
+  Select one of the following options:
+    (1) Change a specific property value
+    (2) Change a saved password
+
+    (M)ain    (B)ack    (H)elp   (E)xit  
+   </pre>
+                  <p class="c9"><a href="#" id="help3-show" class="showLink" onclick="toggleHelp('help3');"><b>[+]</b> Toggle Help</a>
+                     <div id="help3" class="more"><b>Showing Menu Help:</b>
+                        <pre>
+  Admin Main Menu: Change Properties Menu Help
+    
+  Explanation of available options:
+
+    (1) Change a specific property value
+        o Select from the list of available properties displayed
+        o Permits reset of a single value stored in da.properties or
+          user.properties
+          
+    (2) Change a saved password
+        o Only applies if Allow saving passwords is TRUE
+        o Select from the list of available passwords displayed
+        o Permits reset of a single password value
+    
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap12-show" class="showLink" onclick="showHide('menumap12');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap12" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:sys_663</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>sys_663</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#sys_663">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap12-hide" class="hideLink" onclick="showHide('menumap12');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap13-show" class="showLink" onclick="showHide('menumap13');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap13" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:sys_664</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>sys_664</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#sys_664">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap13-hide" class="hideLink" onclick="showHide('menumap13');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap14-show" class="showLink" onclick="showHide('menumap14');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap14" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap14-hide" class="hideLink" onclick="showHide('menumap14');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap15-show" class="showLink" onclick="showHide('menumap15');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap15" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:AdminProp</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>AdminProp</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#AdminProp">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap15-hide" class="hideLink" onclick="showHide('menumap15');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="ResetProp"></a>ResetProp - Reset User Configuration</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  
+  The following options allow for changing property values.
+      
+  Select one of the following options:
+    (1) Reset a specific property value
+    (2) Reset a saved password
+    (3) Reset ALL Stored Properties and Passwords
+
+    (M)ain    (B)ack    (H)elp   (E)xit  
+   </pre>
+                  <p class="c9"><a href="#" id="help4-show" class="showLink" onclick="toggleHelp('help4');"><b>[+]</b> Toggle Help</a>
+                     <div id="help4" class="more"><b>Showing Menu Help:</b>
+                        <pre>
+  Admin Main Menu: Reset Properties Menu Help
+    
+  Explanation of available options:
+
+    (1) Reset a specific property value
+        o Select from the list of available properties displayed
+        o Resets a single value stored in da.properties or
+          user.properties to the default, or NO VALUE if there is not one
+          
+    (2) Reset a saved password
+        o Select from the list of available passwords displayed
+        o Removes the value stored for the password chosen
+        
+    (3) Reset ALL Stored Properties and Passwords
+        o Removes the values from all properties and passwords
+        o Sets those that have a default to that value, or NO VALUE if there 
+          is not one
+    
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap16-show" class="showLink" onclick="showHide('menumap16');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap16" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:sys_668</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>sys_668</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#sys_668">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap16-hide" class="hideLink" onclick="showHide('menumap16');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap17-show" class="showLink" onclick="showHide('menumap17');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap17" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:sys_669</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>sys_669</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#sys_669">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap17-hide" class="hideLink" onclick="showHide('menumap17');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap18-show" class="showLink" onclick="showHide('menumap18');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap18" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:sys_667</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>sys_667</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#sys_667">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap18-hide" class="hideLink" onclick="showHide('menumap18');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap19-show" class="showLink" onclick="showHide('menumap19');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap19" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap19-hide" class="hideLink" onclick="showHide('menumap19');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap20-show" class="showLink" onclick="showHide('menumap20');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap20" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:AdminProp</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>AdminProp</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#AdminProp">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap20-hide" class="hideLink" onclick="showHide('menumap20');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="AdminFile"></a>AdminFile - Data Collection History</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>   
+  Data Collection History allows the viewing of OCM summary 
+  and detail information as well as other diagnostic files.
+    
+  Select one of the following options:
+    (1) Latest OCM Collection Summary
+    (2) Latest OCM Collection Detail
+    (3) RDA Collections Summary
+    (4) RDA Collections Detail
+    (5) ADR Collections Summary
+    (6) ADR Collections Detail
+
+    (M)ain    (B)ack    (H)elp   (E)xit  
+   </pre>
+                  <p class="c9"><a href="#" id="help5-show" class="showLink" onclick="toggleHelp('help5');"><b>[+]</b> Toggle Help</a>
+                     <div id="help5" class="more"><b>Showing Menu Help:</b>
+                        <pre>   
+  Admin Main Menu: Data Collection History Menu Help
+
+  Explanation of available options:
+
+    (1) Latest OCM Collections Summary
+        o Retrieves the latest configuration summary data and provides
+          immediate viewing of this data
+
+    (2) Latest OCM Collections Detail
+        o  Retrieves the latest configuration summary data and provides
+           immediate viewing of this data
+          
+    (3) RDA Collections Summary
+        o List of all RDA collections, including what and when
+  
+    (4) RDA Collections Detail
+        o List of all the files created for each collection listed 
+          in the summary
+        o Output will be extensive, but a paging menu will be 
+          available for scrolling
+            
+    (5) ADR Collections Summary
+        o List of all ADR incidents
+   
+    (6) ADR Collections Detail
+        o Shows incident detail
+        o Future: additional detail is planned
+
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap21-show" class="showLink" onclick="showHide('menumap21');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap21" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:ocm_202</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>ocm_202</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#ocm_202">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap21-hide" class="hideLink" onclick="showHide('menumap21');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap22-show" class="showLink" onclick="showHide('menumap22');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap22" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:ocm_203</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>ocm_203</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#ocm_203">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap22-hide" class="hideLink" onclick="showHide('menumap22');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap23-show" class="showLink" onclick="showHide('menumap23');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap23" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:rda_392</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_392</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_392">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap23-hide" class="hideLink" onclick="showHide('menumap23');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 4&nbsp;  - &nbsp;<a href="#" id="menumap24-show" class="showLink" onclick="showHide('menumap24');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap24" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>4:command:rda_393</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_393</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_393">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap24-hide" class="hideLink" onclick="showHide('menumap24');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 5&nbsp;  - &nbsp;<a href="#" id="menumap25-show" class="showLink" onclick="showHide('menumap25');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap25" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>5:command:adr_173</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>5</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>adr_173</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#adr_173">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap25-hide" class="hideLink" onclick="showHide('menumap25');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 6&nbsp;  - &nbsp;<a href="#" id="menumap26-show" class="showLink" onclick="showHide('menumap26');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap26" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>6:command:adr_174</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>6</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>adr_174</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#adr_174">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap26-hide" class="hideLink" onclick="showHide('menumap26');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap27-show" class="showLink" onclick="showHide('menumap27');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap27" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap27-hide" class="hideLink" onclick="showHide('menumap27');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap28-show" class="showLink" onclick="showHide('menumap28');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap28" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap28-hide" class="hideLink" onclick="showHide('menumap28');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="adr_173"></a>adr_173</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Adr</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Summary of Incidents</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command retrieves the latest configuration summary data and provides
+    immediate viewing of this data.
+
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example: sample below has 0 incidents so is not truly reflective
+      of a production environment
+              
+                           ADR Summary
+          =================================================
+          ORACLE_HOME:  /u01/app/oracle/product/11.2.0.1.0
+             ADR Base:  /u01/app/oracle
+             ADR Home:  diag/rdbms/v1121/V1121
+          ORACLE_SID:  V1121
+          =================================================
+          =================================================
+          Displaying the 5 Most recent ADR incidents
+          =================================================
+          Incident ID: 0
+          Created: &lt;NULL&gt;
+          Error: &lt;NULL&gt;-0
+   
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>summary</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="adr_174"></a>adr_174</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Adr</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Incidents Detail</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command retrieves the latest configuration summary detail and provides
+    immediate viewing of this data.
+    
+    NOTE: Limited summary details are currently available
+          More details will be added in coming releases    
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example:
+                          Summary Detail
+          =================================================
+          ORACLE_HOME:  /u01/app/oracle/product/11.2.0.1.0
+             ADR Base:  /u01/app/oracle
+             ADR Home:  diag/rdbms/v1121/V1121
+          ORACLE_SID:  V1121
+          =================================================
+          =================================================
+          Displaying the 5 Most recent ADR incidents
+          =================================================
+
+                        Additional Details
+          =================================================
+          Displaying the last 500 lines of
+          /u01/app/oracle/diag/rdbms/v1121/V1121/trace/V1121_ora_6782.trc
+          -------------------------------------------------
+          _bloom_predicate_enabled            = true
+          _optimizer_enable_extended_stats    = true
+          _is_lock_table_for_ddl_wait_lock    = 0
+          _pivot_implementation_method        = choose
+          optimizer_capture_sql_plan_baselines = false
+          optimizer_use_sql_plan_baselines    = true
+          _optimizer_star_trans_min_cost      = 0
+          ...
+      
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>summary detail</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="ocm_202"></a>ocm_202</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Ocm</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Latest Configuration Summary</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary   
+    This command retrieves the latest configuration summary data and provides
+    immediate viewing of this data  .
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Latest configuration summary level information is displayed
+      
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>summary</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="ocm_203"></a>ocm_203</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Ocm</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Latest Configuration Detail</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command retrieves the latest configuration summary detailed data 
+    and provides immediate viewing of this data. 
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Latest configuration detail level information is displayed
+      
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>summary detail</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_392"></a>rda_392</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Collection Summary</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command shows the last collection details (what, where and when)
+    followed by a collection summary of each module and profile discovered. 
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Results are:
+            Last Collection(x) for: RDA
+            Date: Tue Feb 28 07:19:06 EST 2012
+            Output Directory: $ORACLE_HOME/rda/da/output/rda/DB11g/output
+            COLLECTION SUMMARY:
+              Overview
+              Operating System Setup
+              User Profile
+              Performance
+              .... 
+   
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>summary</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_393"></a>rda_393</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Collection Detail</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command includes the summary details as well as a list of
+    all the detailed files for that collection.
+    This is repeated for each collection discovered.
+      
+    Input Requirements
+      o None
+    
+    Output Details
+      o Results are repeated for each collection found:
+         Last Collection(x) for: RDA
+         Date: Tue Feb 28 10:21:36 EST 2012
+         Output Directory: $ORACLE_HOME/rda/da/output/rda/LOG/output
+         COLLECTION SUMMARY:
+           Overview
+           RDBMS Log/Trace Files
+
+         FILE LIST:
+         DA_S919LOAD_A.fil
+         DA_LOG_alert_log.htm
+         DA_LOG_last_errors.htm
+         DA_LOG_diag_problems.htm
+         ....
+         
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>summary detail</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="sys_649"></a>sys_649</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>System</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>All Tool Versions</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command displays the version of the Diagnostic Assistant
+    tool as well as versions of ADR, RDA and OCM.
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Version of the Diagnostic Assistant tool currently running
+    o Version of ADR, RDA and OCM installed
+    o Example:
+          DA Version:         1.2.0-b631 
+          RDA Version:        4.26 
+          OCM Version:        10.3.6.0.2 
+          ADR Version:        11.2.0.1.0 
+          Sqlplus Version:    11.2.0.1.0 
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>show_component_versions</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="sys_651"></a>sys_651</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>System</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Stored Properties</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command displays Diagnostic Assistant tool level stored properties.
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Contents of the da.properties file
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>show_da_properties</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="sys_652"></a>sys_652</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>System</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>User Properties</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command displays Diagnostic Assistant user level stored properties.
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Contents of the user.properties file
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>show_user_properties</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="PREREQ_REQ_SETUP_PROP"></a>PREREQ_REQ_SETUP_PROP</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>OS</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Valid values for required_setup_properties.ini</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>TODO</pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+      echo DA.mos_csi
+      echo DA.mos_userid
+      echo DA.host.DA_PROCWATCHER_DIR
+      echo DA.host.DA_OSWBB_DIR
+      echo DA.host.DA_OSWATCHER_DIR
+      echo DA.host.DA_EXACHK_DIR
+      echo DA.host.sqlt_dir
+      echo DA.host.tom_home
+      echo DA.host.hangfg_dir
+      echo DA.host.stackx_loc
+    </pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="sys_663"></a>sys_663</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>System</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Change User Configuration values</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+
+    This command allows you to change the existing value for a
+    setup property.
+      
+  Input Requirements
+    o Selection of a property to change
+    o The new value for the property
+    
+  Output Details
+    o Confirmation that the value for the given property has been set to the
+      new value
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">command_prompt1<b>: </b>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2"><i>PREREQ_REQ_SETUP_PROP|Please choose a property to change 
+    |PREREQ_REQ_SETUP_PROP:all</i>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>set_property %%PREREQ_REQ_SETUP_PROP%% show_before_set</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="PREREQ_PASSWORD_PROP"></a>PREREQ_PASSWORD_PROP</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>OS</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Valid values for passwords in required_setup_properties.ini</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>TODO</pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+      echo DA.mos_password
+      echo DA.host.celladmin_password
+      echo DA.root_password
+      echo DA.system.SQLPLUS_PASSWORD
+      echo DA.scott.SQLPLUS_PASSWORD
+    </pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="sys_664"></a>sys_664</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>System</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Change Saved Passwords</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command allows you to change the existing value for a stored
+    password.
+      
+    Input Requirements
+      o Selection of a password to change
+      o The new value for the password
+    
+    Output Details
+      o Confirmation that the value for the password has been changed
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">command_prompt1<b>: </b>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2"><i>PREREQ_PASSWORD_PROP|Please choose which password to change
+    |PREREQ_PASSWORD_PROP:all</i>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>set_wallet_property %%PREREQ_PASSWORD_PROP%%</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="PREREQ_BOOLEAN"></a>PREREQ_BOOLEAN</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>OS</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Valid values for boolean questions</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>TODO</pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+      echo TRUE
+      echo FALSE
+    </pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="PREREQ_YES_NO"></a>PREREQ_YES_NO</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>OS</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Valid values for YES/NO questions</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>TODO</pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+      echo YES
+      echo NO
+    </pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="sys_665"></a>sys_665</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>System</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Allow/Disallow Saving Passwords</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command can be used to allow or disallow passwords (credentials)
+    entered	into Diagnostic Assistant to be saved. By default, this 
+    functionality is disallowed (FALSE).
+      
+  Input Requirements
+    o TRUE or FALSE
+    
+  Output Details
+    o Confirmation that the value chosen was saved
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">command_prompt1<b>: </b>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2"><i>PREREQ_BOOLEAN|Allow credentials to be saved|PREREQ_BOOLEAN:all</i>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>set_user_property use_wallet %%PREREQ_BOOLEAN%%</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="sys_666"></a>sys_666</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>System</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Configured Properties</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command can be used to allow or disallow use of a browser viewer.
+    By default, this functionality is disallowed (FALSE).
+      
+  Input Requirements
+    o TRUE or FALSE
+    
+  Output Details
+    o Confirmation that the value chosen was saved
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">command_prompt1<b>: </b>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2"><i>PREREQ_BOOLEAN|Allow browser viewer to be used|PREREQ_BOOLEAN:all</i>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>set_user_property browser_viewer_spawned %%PREREQ_BOOLEAN%%</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="sys_667"></a>sys_667</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>System</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Property Defaults</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command will remove all saved values and return system properties 
+    to their default values, including turning off saved passwords and emptying
+    the Oracle Wallet, if the YES parameter is passed. If NO is
+    passed, it takes no action.
+      
+  Input Requirements
+    o YES to reset and NO to exit without taking action
+    
+  Output Details
+    o Confirmation that values have been removed and/or reset
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">command_prompt1<b>: </b>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2"><i>PREREQ_YES_NO|Do you wish to reset all saved values to their defaults?|PREREQ_YES_NO:all</i>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>reset_user_properties_to_defaults %%PREREQ_YES_NO%%</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="sys_668"></a>sys_668</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>System</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Reset a specific property value</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+
+    This command allows you to remove the existing value for a
+    setup property. You will be prompted for a value again the next time 
+    you run a command which requires the property.
+      
+  Input Requirements
+    o Selection of a property to reset
+    
+  Output Details
+    o Confirmation that the value for the given property has been removed
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">command_prompt1<b>: </b>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2"><i>PREREQ_REQ_SETUP_PROP|Please choose a property to reset 
+    |PREREQ_REQ_SETUP_PROP:all</i>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>reset_property %%PREREQ_REQ_SETUP_PROP%%</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="sys_669"></a>sys_669</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>System</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Reset a saved password</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+
+    This command allows you to remove the value for an existing saved
+    password. You will be prompted for a value again the next time you run a 
+    command which requires the property.
+      
+  Input Requirements
+    o Selection of which password to reset
+    
+  Output Details
+    o Confirmation that the password has been reset
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">command_prompt1<b>: </b>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2"><i>PREREQ_PASSWORD_PROP|Please choose a property to reset 
+    |PREREQ_PASSWORD_PROP:all</i>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>remove_wallet_property %%PREREQ_PASSWORD_PROP%%</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+      </div>
+   </body>
+</html>

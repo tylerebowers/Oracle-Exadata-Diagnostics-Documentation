@@ -1,0 +1,2460 @@
+<html>
+   <head>
+      <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title></title>
+      <style id="MenuScriptStyle">
+    spanhelp { background:#def3ca; padding:3px; float:left; }
+    .arrow-up {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+
+      border-bottom: 10px solid black;
+    }
+
+    .arrow-down {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+
+      border-top: 10px solid black;
+      }
+      
+    /* This CSS is used for the Show/Hide functionality. */
+   .more {
+      display: none;
+      border-top: 1px solid #666;
+      border-bottom: 1px solid #666; }
+   .more2 {display: none; }
+   a.showLink, a.hideLink {
+      text-decoration: none;
+      color: #36f;
+      padding-left: 8px;
+      background: transparent url(down.gif) no-repeat left; }
+   a.hideLink {
+      background: transparent url(up.gif) no-repeat left; }
+   a.showLink:hover, a.hideLink:hover {
+      border-bottom: 1px dotted #36f; }   
+  </style>
+      <style type="text/css" id="internalStyle">
+      
+/*
+  Copyright 2002, 2011, Oracle and/or its affiliates. All rights reserved.
+  file: blafdoc.css     Version: 2011.10.7
+*/
+
+body {
+  font-family: Tahoma, sans-serif;
+  color: black;
+  background-color: white;
+  font-size: small;
+}
+* html body {
+  /* http://www.info.com.ph/~etan/w3pantheon/style/modifiedsbmh.html */
+  font-size: x-small; /* for IE5.x/win */
+  f\ont-size: small;  /* for other IE versions */
+}
+
+h1 {
+  font-size: 165%;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+
+h2 {
+  color:#336699;
+  font-size: 152%;
+  font-weight: bold;
+}
+
+h3 {
+  color:#336699;
+  font-size: 139%;
+  font-weight: bold;
+}
+
+h4 {
+  color:#336699;
+  font-size: 126%;
+  font-weight: bold;
+}
+
+h5 {
+  color:#336699;
+  font-size: 113%;
+  font-weight: bold;
+  display: inline;
+}
+
+h6 {
+  color:black;
+  font-size: 100%;
+  font-weight: bold;
+  font-style: italic;
+  display: inline;
+}
+
+a:link {
+  color: #039;
+  background: inherit;
+}
+
+a:visited {
+  color: #72007C;
+  background: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a img, img[usemap] {
+  border-style: none;
+}
+
+code, samp, tt {
+  font-family: monospace;
+  font-size: 110%;
+}
+
+caption {
+  text-align: center;
+  font-weight: bold;
+  width: auto;
+}
+
+dt {
+  font-weight: bold;
+}
+
+table {
+    color: #000000;
+    font-weight: bold;
+    border-spacing: 0;
+    outline: medium none;
+font-family: Lucida Grande,Lucida Sans,Arial,sans-serif;
+font-size: 12px;
+
+}
+
+th_test {
+    background:  blue;
+    border: 1px solid #AED0EA;
+    font-size: 23px;
+    font-weight: bold;
+    color: red; 
+}
+td {
+    background: #F2F5F7;
+    border: 1px solid #AED0EA;
+    font-weight: normal;
+    padding: 5;
+}
+
+.td_output {
+   color: #000000;
+   background: #E0E0E0;
+   border: 1px solid #AED0EA;
+   font-family: Lucida Grande,Lucida Sans,Arial,sans-serif;
+   font-size: 13px;
+   font-weight: normal;
+   padding: 1;
+}
+
+.td_column2 {
+    background: #F2F5F7;
+    border: 1px solid #AED0EA;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    color:#336699;
+}
+
+.td_column {
+    background: #D7EBF9;
+    border: 1px solid #AED0EA;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.td_title {
+
+ background: #F2F5F7;
+    border: 0px solid #AED0EA;
+    font-weight: normal;
+    padding: 5;
+}
+
+pre {
+ overflow-x: auto; /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+ white-space: pre-wrap; /* css-3 */
+ white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+ white-space: -pre-wrap; /* Opera 4-6 */
+ white-space: -o-pre-wrap; /* Opera 7 */
+ /* width: 99%; */
+ word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol {
+  list-style-type: lower-roman;
+}
+
+td p:first-child, td pre:first-child {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+table.table-border {
+  border-collapse: collapse;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+table.table-border th {
+  padding: 0.5ex 0.25em;
+  color: black;
+  background-color: #f7f7ea;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+table.table-border tr {
+  padding: 0.5ex 0.25em;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+table.table-border td {
+  padding: 0.5ex 0.25em;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+span.gui-object, span.gui-object-action {
+  font-weight: bold;
+}
+
+span.gui-object-title { }
+
+p.horizontal-rule {
+  width: 100%;
+  border: solid #cc9;
+  border-width: 0px 0px 1px 0px;
+  margin-bottom: 4ex;
+}
+
+div.zz-skip-header {
+  display: none;
+}
+
+td.zz-nav-header-cell {
+  text-align: left;
+  font-size: 95%;
+  width: 99%;
+  color: black;
+  background: inherit;
+  font-weight: normal;
+  vertical-align: top;
+  margin-top: 0ex;
+  padding-top: 0ex;
+}
+
+a.zz-nav-header-link {
+  font-size: 95%;
+}
+
+td.zz-nav-button-cell {
+  white-space: nowrap;
+  text-align: center;
+  width: 1%;
+  vertical-align: top;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 0ex;
+  padding-top: 0ex;
+}
+
+a.zz-nav-button-link {
+  font-size: 90%;
+}
+
+div.zz-nav-footer-menu {
+  width: 100%;
+  text-align: center;
+  margin-top: 2ex;
+  margin-bottom: 4ex;
+}
+
+p.c9 {
+   line-height: 13.872pt;
+   margin-top: 0.0pt;
+   margin-bottom: 5.0pt;
+   margin-left: 6.0pt;
+   margin-right: 6.0pt;
+   }
+p.zz-legal-notice, a.zz-legal-notice-link {
+  font-size: 85%;
+  /* display: none; */ /* Uncomment to hide legal notice */
+}
+
+
+    </style><script type="text/javascript">
+  // Validate using: http://www.quirksmode.org/dom/w3c_html.html 
+  function showHide(divId) {
+     if (document.getElementById(divId)) {
+        if (document.getElementById(divId+'-show').style.display != 'none') {
+           document.getElementById(divId+'-show').style.display = 'none';
+           document.getElementById(divId).style.display = 'block';
+        }
+        else {
+           document.getElementById(divId+'-show').style.display = 'inline';
+           document.getElementById(divId).style.display = 'none';
+        }
+     }
+  }
+  
+  function toggleHelp(id) {
+     var de = document.getElementById(id);
+     if(de.style.display == 'block')
+        de.style.display = 'none';
+     else
+        de.style.display = 'block';
+  }
+ </script>
+   </head>
+   <body><a name="TOP"></a><img border="0" src="http://www.oracleimg.com/us/assets/oralogo-small.gif" alt="Oracle Corp. and/or its affiliates.">
+      <div align="center">
+         <h3>Oracle Diagnostics: Exalogic - Documentation </h3>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="main"></a>main - Oracle Diagnostics: Exalogic</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  This menu enables you to collect Exalogic diagnostic data 
+  based on a specific issue. Exalogic system components have 
+  been grouped into the categories below. 
+    
+  Select one of the following options:
+    (1) Node            
+    (2) Hardware
+    (3) Network
+    (4) Patch Information
+  
+    (H)elp   (E)xit  
+   
+   </pre>
+                  <p class="c9"><a href="#" id="help1-show" class="showLink" onclick="toggleHelp('help1');"><b>[+]</b> Toggle Help</a>
+                     <div id="help1" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Exalogic Main Menu
+     
+  This menu help describes available options for troubleshooting 
+  exalogic issues.
+      
+  Explanation of available options:
+    (1) Node
+ 
+    (2) Hardware
+                  
+    (3) Network
+      
+    (4) Patch Information
+              
+    </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap1-show" class="showLink" onclick="showHide('menumap1');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap1" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:menu:Node</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Node</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Node">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap1-hide" class="hideLink" onclick="showHide('menumap1');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap2-show" class="showLink" onclick="showHide('menumap2');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap2" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:menu:HW</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>HW</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#HW">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap2-hide" class="hideLink" onclick="showHide('menumap2');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap3-show" class="showLink" onclick="showHide('menumap3');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap3" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:menu:Network</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Network</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Network">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap3-hide" class="hideLink" onclick="showHide('menumap3');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 4&nbsp;  - &nbsp;<a href="#" id="menumap4-show" class="showLink" onclick="showHide('menumap4');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap4" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>4:menu:Patch</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Patch</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Patch">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap4-hide" class="hideLink" onclick="showHide('menumap4');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap5-show" class="showLink" onclick="showHide('menumap5');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap5" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap5-hide" class="hideLink" onclick="showHide('menumap5');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="Node"></a>Node - Exalogic: Node Diagnostics</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  This menu enables you to collect exalogic node diagnostics based
+  on a specific issue. The Exalogic node components are organized
+  by categories for improved diagnostic collection and analysis.
+
+  Select one of the following options:
+    (1) Failed Drives
+    (2) ILOM
+
+    (M)ain    (B)ack    (H)elp   (E)xit</pre>
+                  <p class="c9"><a href="#" id="help2-show" class="showLink" onclick="toggleHelp('help2');"><b>[+]</b> Toggle Help</a>
+                     <div id="help2" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Exalogic Node Diagnostics
+    
+  Explanation of available options:
+    (1) Failed Drives 
+        o This option executes the "Exalogic_DriveFailure" RDA profile  
+          which can be used in conjunction with other profiles to collect  
+          information for troubleshooting Oracle Exalogic drive failure 
+          problems.
+          
+    (2) ILOM
+        o This option executes the "Exalogic_Ilom" RDA profile which is  
+          useful in troubleshooting Ilom related issues like malfunction 
+          of any sensors, machine or system related details, SDR information 
+          and Ilom network information.
+ 
+    </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap6-show" class="showLink" onclick="showHide('menumap6');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap6" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_1">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap6-hide" class="hideLink" onclick="showHide('menumap6');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap7-show" class="showLink" onclick="showHide('menumap7');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap7" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_2">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap7-hide" class="hideLink" onclick="showHide('menumap7');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap8-show" class="showLink" onclick="showHide('menumap8');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap8" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap8-hide" class="hideLink" onclick="showHide('menumap8');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap9-show" class="showLink" onclick="showHide('menumap9');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap9" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap9-hide" class="hideLink" onclick="showHide('menumap9');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="HW"></a>HW - Exalogic: Hardware Diagnostics</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  This menu enables you to collect Exalogic hardware diagnostic 
+  data based on a specific issue. Exalogic system components 
+  have been grouped into the categories below. 
+
+  Select one of the following options:
+    (1) Exalogic RAID Card
+    (2) Failed Drives
+    (3) Performance
+    (4) Exalogic Rack Temperature
+
+    (M)ain    (B)ack    (H)elp   (E)xit
+</pre>
+                  <p class="c9"><a href="#" id="help3-show" class="showLink" onclick="toggleHelp('help3');"><b>[+]</b> Toggle Help</a>
+                     <div id="help3" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Exalogic Hardware Diagnostics Help
+    
+  Explanation of available options:
+    (1) Exalogic RAID card
+        o This option executes the "Exalogic_RAID" RDA profile which is 
+          used to troubleshoot issues with Internal RAID cards present 
+          in Exalogic machine.    
+    
+    (2) Failed Drives
+        o This option executes the "Exalogic_DriveFailure" RDA profile  
+          which can be used in conjunction with other profiles to collect 
+          information for troubleshooting Oracle Exalogic drive failure 
+          problems.
+          
+    (3) Performance
+        o This option executes the "Exalogic_HealthHwSw" RDA profile which is 
+          used to determine the current Hardware/Firmware and Software version 
+          information on the Exalogic machine.
+          
+    (4) Exalogic Temp
+        o This option executes the "Exalogic_Temp" RDA profile which can be  
+          used to determine the Ambient temperature information across all  
+          the compute nodes in an Exalogic machine.
+		
+</pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap10-show" class="showLink" onclick="showHide('menumap10');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap10" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_3">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap10-hide" class="hideLink" onclick="showHide('menumap10');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap11-show" class="showLink" onclick="showHide('menumap11');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap11" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_1">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap11-hide" class="hideLink" onclick="showHide('menumap11');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap12-show" class="showLink" onclick="showHide('menumap12');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap12" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:rda_4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_4">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap12-hide" class="hideLink" onclick="showHide('menumap12');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 4&nbsp;  - &nbsp;<a href="#" id="menumap13-show" class="showLink" onclick="showHide('menumap13');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap13" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>4:command:rda_5</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_5</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_5">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap13-hide" class="hideLink" onclick="showHide('menumap13');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap14-show" class="showLink" onclick="showHide('menumap14');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap14" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap14-hide" class="hideLink" onclick="showHide('menumap14');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap15-show" class="showLink" onclick="showHide('menumap15');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap15" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap15-hide" class="hideLink" onclick="showHide('menumap15');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="Net"></a>Net - Exalogic: Network Diagnostics</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  This menu enables you to collect Exalogic network diagnostic 
+  data based on a specific issue. Exalogic network components 
+  have been grouped into the categories below. 
+
+  Select one of the following options:
+    (1) Performance (Network Health)
+    (2) Network Cabling
+    (3) IB Switch
+    (4) IB Traffic
+    (5) General
+
+    (M)ain    (B)ack    (H)elp   (E)xit
+</pre>
+                  <p class="c9"><a href="#" id="help4-show" class="showLink" onclick="toggleHelp('help4');"><b>[+]</b> Toggle Help</a>
+                     <div id="help4" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Exalogic Network Diagnostics Help
+    
+  Explanation of available options:
+    (1) Performance (Network Health)
+        o This option executes the "Exalogic_HealthNet" RDA profile which 
+          can be used to collect information about the current status of the 
+          network across the entire Exalogic machine. It will print details 
+          about the network topology and also any errors in the InfiniBand 
+          fabric. This profile can be used to troubleshoot any 	network 
+          performance issues.
+    
+    (2) Network Cabling
+        RDA will execute for the following module:
+          o Exalogic_NetworkCabling
+          
+    (3) IB Switch
+        RDA will execute for the following module with and without root
+        level data:
+          o Exalogic_IbSwitch
+          
+    (4) IB Traffic
+        o This option executes the "Exalogic_IbSwitch" RDA profile which checks 
+          the availability and correct functionality of all the IB switches 
+          inside Exalogic rack. This profile can be run in conjunction with 
+          Network Cabling" option in the menu to collect complete on all the 
+          switches in Exalogic Rack and verify the correct connectivity and 
+          functionality of all the cables.
+    
+    (5) General
+        o This option executes the "Exalogic_Network" RDA profile which checks 
+          for any configuration issues in the network on any given compute node. 
+          This profile collects in addition to collecting the information about 
+          the network topology.
+ 
+</pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap16-show" class="showLink" onclick="showHide('menumap16');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap16" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_6</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_6</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_6">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap16-hide" class="hideLink" onclick="showHide('menumap16');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap17-show" class="showLink" onclick="showHide('menumap17');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap17" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_7</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_7</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_7">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap17-hide" class="hideLink" onclick="showHide('menumap17');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap18-show" class="showLink" onclick="showHide('menumap18');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap18" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:menu:Switch</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Switch</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Switch">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap18-hide" class="hideLink" onclick="showHide('menumap18');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 4&nbsp;  - &nbsp;<a href="#" id="menumap19-show" class="showLink" onclick="showHide('menumap19');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap19" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>4:command:rda_9</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_9</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_9">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap19-hide" class="hideLink" onclick="showHide('menumap19');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 5&nbsp;  - &nbsp;<a href="#" id="menumap20-show" class="showLink" onclick="showHide('menumap20');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap20" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>5:command:rda_10</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>5</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_10</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_10">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap20-hide" class="hideLink" onclick="showHide('menumap20');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap21-show" class="showLink" onclick="showHide('menumap21');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap21" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap21-hide" class="hideLink" onclick="showHide('menumap21');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap22-show" class="showLink" onclick="showHide('menumap22');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap22" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap22-hide" class="hideLink" onclick="showHide('menumap22');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="Patch"></a>Patch - Exalogic: Patch Information</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  This menu enables you to collect Exalogic patching information.
+    
+  Select one of the following options:
+    (1) Patch Information
+
+    (M)ain    (B)ack    (H)elp   (E)xit
+</pre>
+                  <p class="c9"><a href="#" id="help5-show" class="showLink" onclick="toggleHelp('help5');"><b>[+]</b> Toggle Help</a>
+                     <div id="help5" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Exalogic Patch Information Help
+     
+  Explanation of available options:
+    (1) Patch Information
+        o Select this option to collect diagnostic data based on 
+          the "Exalogic_Patch" RDA profile which displays information about 
+          the current running Exalogic PSU/Firmware version and the version 
+          upgrade history. This will also print the details of RAID card
+          Firmware version.
+ 
+</pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap23-show" class="showLink" onclick="showHide('menumap23');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap23" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_11</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_11</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_11">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap23-hide" class="hideLink" onclick="showHide('menumap23');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap24-show" class="showLink" onclick="showHide('menumap24');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap24" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap24-hide" class="hideLink" onclick="showHide('menumap24');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap25-show" class="showLink" onclick="showHide('menumap25');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap25" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap25-hide" class="hideLink" onclick="showHide('menumap25');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="HW"></a>HW - Exalogic: Hardware Diagnostics</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  This menu enables you to collect Exalogic hardware diagnostic 
+  data based on a specific issue. Exalogic system components 
+  have been grouped into the categories below. 
+
+  Select one of the following options:
+    (1) Exalogic RAID Card
+    (2) Failed Drives
+    (3) Performance
+    (4) Exalogic Rack Temperature
+
+    (M)ain    (B)ack    (H)elp   (E)xit
+</pre>
+                  <p class="c9"><a href="#" id="help6-show" class="showLink" onclick="toggleHelp('help6');"><b>[+]</b> Toggle Help</a>
+                     <div id="help6" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Exalogic Hardware Diagnostics Help
+    
+  Explanation of available options:
+    (1) Exalogic RAID card
+        o This option executes the "Exalogic_DriveFailure" RDA profile which 
+          can be used in conjunction with other profiles to collect information 
+          for troubleshooting Oracle Exalogic drive failure problems.
+          
+    (2) Failed Drives
+        o This option executes the "Exalogic_DriveFailure" RDA profile which can 
+          be used in conjunction with other profiles to collect information for 
+          troubleshooting Oracle Exalogic drive failure problems.
+          
+    (3) Performance
+        o This option executes the "Exalogic_HealthHwSw" RDA profile which is 
+          used to determine the current Hardware/Firmware and Software version 
+          information on the Exalogic machine.
+          
+    (4) Exalogic Temp
+        o This option executes the "Exalogic_Temp" RDA profile which can be used 
+          to determine the Ambient temperature information across all the 
+          compute nodes in an Exalogic machine
+
+</pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap26-show" class="showLink" onclick="showHide('menumap26');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap26" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_3">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap26-hide" class="hideLink" onclick="showHide('menumap26');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap27-show" class="showLink" onclick="showHide('menumap27');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap27" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_1">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap27-hide" class="hideLink" onclick="showHide('menumap27');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap28-show" class="showLink" onclick="showHide('menumap28');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap28" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:rda_4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_4">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap28-hide" class="hideLink" onclick="showHide('menumap28');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 4&nbsp;  - &nbsp;<a href="#" id="menumap29-show" class="showLink" onclick="showHide('menumap29');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap29" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>4:command:rda_5</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_5</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_5">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap29-hide" class="hideLink" onclick="showHide('menumap29');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap30-show" class="showLink" onclick="showHide('menumap30');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap30" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap30-hide" class="hideLink" onclick="showHide('menumap30');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap31-show" class="showLink" onclick="showHide('menumap31');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap31" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap31-hide" class="hideLink" onclick="showHide('menumap31');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="Network"></a>Network - Exalogic: Network Diagnostics</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  This menu enables you to collect Exalogic network diagnostic 
+  data based on a specific issue. Exalogic network components 
+  have been grouped into the categories below. 
+
+  Select one of the following options:
+    (1) Performance (Network Health)
+    (2) Network Cabling
+    (3) IB Switch
+    (4) IB Traffic
+    (5) General
+
+    (M)ain    (B)ack    (H)elp   (E)xit
+</pre>
+                  <p class="c9"><a href="#" id="help7-show" class="showLink" onclick="toggleHelp('help7');"><b>[+]</b> Toggle Help</a>
+                     <div id="help7" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Exalogic Network Diagnostics Help
+    
+  Explanation of available options:
+    (1) Performance - Network Health
+        o This option executes the "Exalogic_HealthNet" RDA profile which 
+          can be used to collect information about the current status of the 
+          network across the entire Exalogic machine. It will print details 
+          about the network topology and also any errors in the InfiniBand 
+          fabric. This profile can be used to troubleshoot any 	network 
+          performance issues.
+    
+    (2) Network Cabling
+        o This option executes the "Exalogic_Gateway" RDA profile which 
+          collects information for troubleshooting Oracle Exalogic IB Gateway 
+          connectivity problems. The information will be collected from all the 
+          Gateways present in the Exalogic Rack and the relevant log files will 
+          be gathered from the GW's. This profile can be run in conjunction with
+          "IBswitch" option in the menu to collect complete details on all the 
+          switches in Exalogic Rack. This is used to determine if there are any 
+          issues with how the cabling is done in the network. 
+          
+    (3) IB Switch
+        o RDA will execute the Exalogic_IbSwitch module: 
+        o An additional step adds root level data to the collection. This is
+          optional and requires root user credentials
+          
+    (4) IB Traffic
+        o This option executes the "Exalogic_IbSwitch" RDA profile which checks 
+          the availability and correct functionality of all the IB switches 
+          inside Exalogic rack. This profile can be run in conjunction with 
+          Network Cabling" option in the menu to collect complete on all the 
+          switches in Exalogic Rack and verify the correct connectivity and 
+          functionality of all the cables.
+    
+    (5) General
+        o This option executes the "Exalogic_Network" RDA profile which checks 
+          for any configuration issues in the network on any given compute node. 
+          This profile collects in addition to collecting the information about 
+          the network topology.
+ 
+</pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap32-show" class="showLink" onclick="showHide('menumap32');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap32" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_6</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_6</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_6">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap32-hide" class="hideLink" onclick="showHide('menumap32');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap33-show" class="showLink" onclick="showHide('menumap33');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap33" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_7</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_7</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_7">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap33-hide" class="hideLink" onclick="showHide('menumap33');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap34-show" class="showLink" onclick="showHide('menumap34');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap34" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:menu:Switch</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Switch</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Switch">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap34-hide" class="hideLink" onclick="showHide('menumap34');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 4&nbsp;  - &nbsp;<a href="#" id="menumap35-show" class="showLink" onclick="showHide('menumap35');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap35" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>4:command:rda_9</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_9</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_9">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap35-hide" class="hideLink" onclick="showHide('menumap35');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 5&nbsp;  - &nbsp;<a href="#" id="menumap36-show" class="showLink" onclick="showHide('menumap36');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap36" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>5:command:rda_10</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>5</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_10</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_10">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap36-hide" class="hideLink" onclick="showHide('menumap36');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap37-show" class="showLink" onclick="showHide('menumap37');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap37" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap37-hide" class="hideLink" onclick="showHide('menumap37');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap38-show" class="showLink" onclick="showHide('menumap38');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap38" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap38-hide" class="hideLink" onclick="showHide('menumap38');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="Switch"></a>Switch - IB Switch</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>          
+  Your IB Switch is about to be diagnosed.
+
+  Select one of the following options:
+    (1) Run A New Collection
+    (2) Add Root Level Data To The Collection
+
+    (M)ain    (B)ack    (H)elp    (E)xit  
+   </pre>
+                  <p class="c9"><a href="#" id="help8-show" class="showLink" onclick="toggleHelp('help8');"><b>[+]</b> Toggle Help</a>
+                     <div id="help8" class="more"><b>Showing Menu Help:</b>
+                        <pre>
+  Network: IB Switch
+
+  Explanation of available options:
+    (1) Run A New Collection
+        RDA will execute for the Exalogic_IbSwitch module:
+
+    (2) Add Root Level Data To The Collection
+        RDA will add root level data to the following module:
+          o Exalogic_IbSwitch
+              - root access data must be provided
+              - root data can only be added to an existing collection
+              - option 1 must be run before at least once before this option
+
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap39-show" class="showLink" onclick="showHide('menumap39');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap39" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_8</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_8</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_8">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap39-hide" class="hideLink" onclick="showHide('menumap39');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap40-show" class="showLink" onclick="showHide('menumap40');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap40" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_16</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_16</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_16">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap40-hide" class="hideLink" onclick="showHide('menumap40');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap41-show" class="showLink" onclick="showHide('menumap41');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap41" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap41-hide" class="hideLink" onclick="showHide('menumap41');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap42-show" class="showLink" onclick="showHide('menumap42');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap42" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:Net</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Net</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Net">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap42-hide" class="hideLink" onclick="showHide('menumap42');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_1"></a>rda_1</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Exalogic Failed Drives</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    
+  This command executes the "Exalogic_DriveFailure" RDA profile/module 
+  which can be used in conjunction with other profiles to collect 
+  information for troubleshooting Oracle Exalogic drive failure problems. 
+      
+  Input Requirements
+    o root user credentials 
+    
+  Output Details
+    o PCI Devices Configuration
+    o IPMI Information
+    o Product Serial Number
+        
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Exalogic_DriveFailure</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_2"></a>rda_2</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Exalogic ILOM</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    
+  This command executes the "Exalogic_Ilom" RDA profile/module which is 
+  useful in troubleshooting Ilom related issues like malfunction of any 
+  sensors, machine or system related details, SDR information and Ilom 
+  network information.
+      
+  Input Requirements
+    o root user credentials 
+    
+  Output Details
+    o ILOM related Events, sensors, Network Information and SDR information
+        
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Exalogic_Ilom</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_3"></a>rda_3</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Exalogic RAID</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    
+  This command executes the "Exalogic_RAID" RDA profile/module which is used 
+  to troubleshoot issues with Internal RAID cards present in Exalogic Machine.
+      
+  Input Requirements
+    o root user credentials 
+    
+  Output Details
+    o MegaRAID events
+    o SSD Disk Information
+    o MegaRAID Battery information
+    o RAID hardware configuration/status 
+        
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Exalogic_Raid</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_4"></a>rda_4</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Exalogic Hardware/Software Health</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    
+  This command executes the "Exalogic_HealthHwSw" RDA profile/module which  
+  is used to determine the current Hardware/Firmware and Software version 
+  information on the Exalogic machine.
+      
+  Input Requirements
+    o root user credentials
+    
+  Output Details
+    o CheckHWnFWProfile
+    o CheckSWProfile
+        
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Exalogic_HealthHwSw</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_5"></a>rda_5</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Exalogic Temp</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    
+  This command executes the "Exalogic_Temp" RDA profile/module which 
+  can be used to determine the Ambient temperature information across 
+  all the compute nodes in an Exalogic machine.
+      
+  Input Requirements
+    o Root user credentials
+    
+  Output Details
+    o Inlet Ambient Temperature across all nodes
+    
+  </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Exalogic_Temp</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_6"></a>rda_6</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Exalogic Network Health</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    
+  This command executes the "Exalogic_HealthNet" RDA profile/module which
+  can be used to collect information about the current status of the
+  network across the entire Exalogic machine. It will print details about
+  the network topology and also any errors in the InfiniBand fabric. This
+  profile can be used to troubleshoot any network performance issues.
+      
+  Input Requirements
+    o Root user credentials
+    
+  Output Details
+    o InfiniBand diagnostic commands, including ibnetdiscover and verify-topology 
+        
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Exalogic_HealthNet</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_7"></a>rda_7</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Exalogic Gateway</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    
+  This command executes the "Exalogic_Gateway" RDA profile/module which 
+  collects information for troubleshooting Oracle Exalogic  IB Gateway 
+  connectivity problems. The information will be collected from all the 
+  Gateways present in the Exalogic Rack and the relevant log files will 
+  be gathered from the GW's. This profile can be run in conjunction with 
+  IBswitch" option in the menu to collect complete details on all the 
+  switches in Exalogic Rack .This is used to determine if there are any 
+  issues with how the cabling is done in the network.
+      
+  Input Requirements
+    o Root user credentials
+    
+  Output Details
+    o NM2 Gateways inside the Exalogic RACK including Gateway version  
+      details, errors or faults and Subnet manager 
+        
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Exalogic_Gateway</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_8"></a>rda_8</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Exalogic IB Switch</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    
+  This command executes the "Exalogic_IbSwitch" RDA profile/module which 
+  checks the availability and correct functionality of all the IB 
+  switches inside Exalogic rack. This profile can be run in conjunction 
+  with Network Cabling" option in the menu to collect complete on all 
+  the switches in Exalogic Rack and verify the correct connectivity and 
+  functionality of all the cables.
+      
+  Input Requirements
+    o Root user credentials
+    
+  Output Details
+    o Infiniband Switches inside the Exalogic RACK, which includes 
+      leaf switches and spine switches (version details and errors 
+      or faults in the InfiniBand switches, and Subnet manager 
+      information).
+        
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Exalogic_IbSwitch</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_9"></a>rda_9</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Exalogic IB Fabric</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    
+  This command executes the "Exalogic_IbFabric" RDA profile/module which 
+  checks the functionality of the Infiniband fabric , verifies the 
+  correct topology as determined by the factory configuration and collects 
+  IB diagnostic information. This is useful for determining any issues with 
+  the Infiniband traffic inside Exalogic Rack.
+      
+  Input Requirements
+    o Root user credentials
+    
+  Output Details
+    o Infiniband errors
+    o Infiniband Ports link status
+    o IB topology information
+    o Diagnostic logs
+        
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Exalogic_IbFabric</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_10"></a>rda_10</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Exalogic Network</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    
+  This command executes the "Exalogic_Network" RDA profile/module which 
+  checks for any configuration issues in the network on any given compute 
+  node. This profile collects in addition to collecting the 
+  information about the network topology.
+      
+  Input Requirements
+    o Root user credentials
+    
+  Output Details
+    o network topology information
+        
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Exalogic_Network</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_11"></a>rda_11</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Exalogic Patch</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+
+  This command executes the "Exalogic_Patch" RDA profile/module which 
+  displays information about the current running Exalogic PSU/Firmware 
+  version and the version upgrade history. This will also print the 
+  details of RAID card Firmware version.
+
+  Input Requirements
+    o Root user credentials
+    
+  Output Details
+    o Exalogic PSU/Firmware version 
+    o version upgrade history details 
+        
+  </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Exalogic_Patch</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_16"></a>rda_16</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Exalogic Ib Switch Root</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    
+  Runs Exalogic_IbSwitch profile at the root level to collect additional 
+  information for the Exalogic_IbSwitch collection. You must have run the
+  Exalogic_IbSwitch profile in normal (non-root) mode prior to this and  
+  have an existing "Exalogic_IbSwitch" subdirectory under the Diagnostic 
+  Assistant output directory to store this additional information.
+      
+  Input Requirements
+    o Enter the root user password
+    o Enter the switch user password
+    
+  Output Details
+    o Shows a summary of the collection process
+    o Generates a collection of files in the "Exalogic_IbSwitch" 
+      subdirectory under the Diagnostic Assistant output directory that 
+      contain detailed switch data
+        
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile_root=Exalogic_IbSwitch</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,4739 @@
+<html>
+   <head>
+      <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title></title>
+      <style id="MenuScriptStyle">
+    spanhelp { background:#def3ca; padding:3px; float:left; }
+    .arrow-up {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+
+      border-bottom: 10px solid black;
+    }
+
+    .arrow-down {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+
+      border-top: 10px solid black;
+      }
+      
+    /* This CSS is used for the Show/Hide functionality. */
+   .more {
+      display: none;
+      border-top: 1px solid #666;
+      border-bottom: 1px solid #666; }
+   .more2 {display: none; }
+   a.showLink, a.hideLink {
+      text-decoration: none;
+      color: #36f;
+      padding-left: 8px;
+      background: transparent url(down.gif) no-repeat left; }
+   a.hideLink {
+      background: transparent url(up.gif) no-repeat left; }
+   a.showLink:hover, a.hideLink:hover {
+      border-bottom: 1px dotted #36f; }   
+  </style>
+      <style type="text/css" id="internalStyle">
+      
+/*
+  Copyright 2002, 2011, Oracle and/or its affiliates. All rights reserved.
+  file: blafdoc.css     Version: 2011.10.7
+*/
+
+body {
+  font-family: Tahoma, sans-serif;
+  color: black;
+  background-color: white;
+  font-size: small;
+}
+* html body {
+  /* http://www.info.com.ph/~etan/w3pantheon/style/modifiedsbmh.html */
+  font-size: x-small; /* for IE5.x/win */
+  f\ont-size: small;  /* for other IE versions */
+}
+
+h1 {
+  font-size: 165%;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+
+h2 {
+  color:#336699;
+  font-size: 152%;
+  font-weight: bold;
+}
+
+h3 {
+  color:#336699;
+  font-size: 139%;
+  font-weight: bold;
+}
+
+h4 {
+  color:#336699;
+  font-size: 126%;
+  font-weight: bold;
+}
+
+h5 {
+  color:#336699;
+  font-size: 113%;
+  font-weight: bold;
+  display: inline;
+}
+
+h6 {
+  color:black;
+  font-size: 100%;
+  font-weight: bold;
+  font-style: italic;
+  display: inline;
+}
+
+a:link {
+  color: #039;
+  background: inherit;
+}
+
+a:visited {
+  color: #72007C;
+  background: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a img, img[usemap] {
+  border-style: none;
+}
+
+code, samp, tt {
+  font-family: monospace;
+  font-size: 110%;
+}
+
+caption {
+  text-align: center;
+  font-weight: bold;
+  width: auto;
+}
+
+dt {
+  font-weight: bold;
+}
+
+table {
+    color: #000000;
+    font-weight: bold;
+    border-spacing: 0;
+    outline: medium none;
+font-family: Lucida Grande,Lucida Sans,Arial,sans-serif;
+font-size: 12px;
+
+}
+
+th_test {
+    background:  blue;
+    border: 1px solid #AED0EA;
+    font-size: 23px;
+    font-weight: bold;
+    color: red; 
+}
+td {
+    background: #F2F5F7;
+    border: 1px solid #AED0EA;
+    font-weight: normal;
+    padding: 5;
+}
+
+.td_output {
+   color: #000000;
+   background: #E0E0E0;
+   border: 1px solid #AED0EA;
+   font-family: Lucida Grande,Lucida Sans,Arial,sans-serif;
+   font-size: 13px;
+   font-weight: normal;
+   padding: 1;
+}
+
+.td_column2 {
+    background: #F2F5F7;
+    border: 1px solid #AED0EA;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    color:#336699;
+}
+
+.td_column {
+    background: #D7EBF9;
+    border: 1px solid #AED0EA;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.td_title {
+
+ background: #F2F5F7;
+    border: 0px solid #AED0EA;
+    font-weight: normal;
+    padding: 5;
+}
+
+pre {
+ overflow-x: auto; /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+ white-space: pre-wrap; /* css-3 */
+ white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+ white-space: -pre-wrap; /* Opera 4-6 */
+ white-space: -o-pre-wrap; /* Opera 7 */
+ /* width: 99%; */
+ word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol {
+  list-style-type: lower-roman;
+}
+
+td p:first-child, td pre:first-child {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+table.table-border {
+  border-collapse: collapse;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+table.table-border th {
+  padding: 0.5ex 0.25em;
+  color: black;
+  background-color: #f7f7ea;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+table.table-border tr {
+  padding: 0.5ex 0.25em;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+table.table-border td {
+  padding: 0.5ex 0.25em;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+span.gui-object, span.gui-object-action {
+  font-weight: bold;
+}
+
+span.gui-object-title { }
+
+p.horizontal-rule {
+  width: 100%;
+  border: solid #cc9;
+  border-width: 0px 0px 1px 0px;
+  margin-bottom: 4ex;
+}
+
+div.zz-skip-header {
+  display: none;
+}
+
+td.zz-nav-header-cell {
+  text-align: left;
+  font-size: 95%;
+  width: 99%;
+  color: black;
+  background: inherit;
+  font-weight: normal;
+  vertical-align: top;
+  margin-top: 0ex;
+  padding-top: 0ex;
+}
+
+a.zz-nav-header-link {
+  font-size: 95%;
+}
+
+td.zz-nav-button-cell {
+  white-space: nowrap;
+  text-align: center;
+  width: 1%;
+  vertical-align: top;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 0ex;
+  padding-top: 0ex;
+}
+
+a.zz-nav-button-link {
+  font-size: 90%;
+}
+
+div.zz-nav-footer-menu {
+  width: 100%;
+  text-align: center;
+  margin-top: 2ex;
+  margin-bottom: 4ex;
+}
+
+p.c9 {
+   line-height: 13.872pt;
+   margin-top: 0.0pt;
+   margin-bottom: 5.0pt;
+   margin-left: 6.0pt;
+   margin-right: 6.0pt;
+   }
+p.zz-legal-notice, a.zz-legal-notice-link {
+  font-size: 85%;
+  /* display: none; */ /* Uncomment to hide legal notice */
+}
+
+
+    </style><script type="text/javascript">
+  // Validate using: http://www.quirksmode.org/dom/w3c_html.html 
+  function showHide(divId) {
+     if (document.getElementById(divId)) {
+        if (document.getElementById(divId+'-show').style.display != 'none') {
+           document.getElementById(divId+'-show').style.display = 'none';
+           document.getElementById(divId).style.display = 'block';
+        }
+        else {
+           document.getElementById(divId+'-show').style.display = 'inline';
+           document.getElementById(divId).style.display = 'none';
+        }
+     }
+  }
+  
+  function toggleHelp(id) {
+     var de = document.getElementById(id);
+     if(de.style.display == 'block')
+        de.style.display = 'none';
+     else
+        de.style.display = 'block';
+  }
+ </script>
+   </head>
+   <body><a name="TOP"></a><img border="0" src="http://www.oracleimg.com/us/assets/oralogo-small.gif" alt="Oracle Corp. and/or its affiliates.">
+      <div align="center">
+         <h3>DA: Business Analytics - Documentation </h3>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="main"></a>main - DA: Business Analytics</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+         
+  The Diagnostic Assistant Business Analytics menu currently includes Hyperion 
+  Enterprise Performance Management (EPM) and Oracle Business Intelligence 
+  (OBI) that capture key data for troubleshooting and analysis using 
+  collectors, scripts, OS commands, etc.
+    
+  Select one of the following options:
+    (1) Enterprise Performance Management Collectors
+    (2) Oracle Business Intelligence Collectors
+	
+    (H)elp   (E)xit  
+    
+   
+   </pre>
+                  <p class="c9"><a href="#" id="help1-show" class="showLink" onclick="toggleHelp('help1');"><b>[+]</b> Toggle Help</a>
+                     <div id="help1" class="more"><b>Showing Menu Help:</b>
+                        <pre>
+  DA: Business Analytics Help
+     
+  The Business analytics menu currently includes collectors for Hyperion 
+  Enterprise Performance Management (EPM) and Oracle Business Intelligence 
+  (OBI).  
+    
+  Explanation of available options:
+    (1) Enterprise Performance Management (EPM) Collectors  
+    
+    (2) Oracle Business Intelligence (OBI) Collectors
+    
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap1-show" class="showLink" onclick="showHide('menumap1');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap1" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:menu:baEPMmain</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>baEPMmain</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#baEPMmain">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap1-hide" class="hideLink" onclick="showHide('menumap1');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap2-show" class="showLink" onclick="showHide('menumap2');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap2" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:menu:obiMain</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>obiMain</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#obiMain">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap2-hide" class="hideLink" onclick="showHide('menumap2');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap3-show" class="showLink" onclick="showHide('menumap3');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap3" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap3-hide" class="hideLink" onclick="showHide('menumap3');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap4-show" class="showLink" onclick="showHide('menumap4');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap4" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap4-hide" class="hideLink" onclick="showHide('menumap4');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="baEPMmain"></a>baEPMmain - DA: Hyperion Enterprise Performance Management (EPM)</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+         
+  The Hyperion Enterprise Performance Management (EPM) captures key data for 
+  troubleshooting and analysis using collectors, scripts, OS commands, etc.
+    
+  Select one of the following options:
+    (1)  Start All Hyperion applications
+    (2)  Server Pre-Install
+    (3)  Client Pre-Install
+    (4)  Post-Install
+	
+    (M)ain    (B)ack    (H)elp    (E)xit
+    
+   
+   </pre>
+                  <p class="c9"><a href="#" id="help2-show" class="showLink" onclick="toggleHelp('help2');"><b>[+]</b> Toggle Help</a>
+                     <div id="help2" class="more"><b>Showing Menu Help:</b>
+                        <pre>
+  Oracle Diagnostic Assistant: Hyperion Enterprise Performance Management Menu Help
+     
+  The Diagnostic Assistant Hyperion Enterprise Performance Management Menu ...
+    
+  Explanation of available options:  
+    (1)  Start All Hyperion applications
+    (2)  Server Pre-Install
+    (3)  Client Pre-Install
+    (4)  Post-Install
+    
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap5-show" class="showLink" onclick="showHide('menumap5');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap5" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:menu:startAll</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>startAll</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#startAll">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap5-hide" class="hideLink" onclick="showHide('menumap5');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap6-show" class="showLink" onclick="showHide('menumap6');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap6" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_100</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_100</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_100">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap6-hide" class="hideLink" onclick="showHide('menumap6');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap7-show" class="showLink" onclick="showHide('menumap7');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap7" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:rda_102</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_102</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_102">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap7-hide" class="hideLink" onclick="showHide('menumap7');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 4&nbsp;  - &nbsp;<a href="#" id="menumap8-show" class="showLink" onclick="showHide('menumap8');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap8" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>4:menu:PostInstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>PostInstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#PostInstall">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap8-hide" class="hideLink" onclick="showHide('menumap8');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap9-show" class="showLink" onclick="showHide('menumap9');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap9" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap9-hide" class="hideLink" onclick="showHide('menumap9');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap10-show" class="showLink" onclick="showHide('menumap10');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap10" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap10-hide" class="hideLink" onclick="showHide('menumap10');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="obiMain"></a>obiMain - DA: Business Analytics</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+         
+  The Oracle Business Intelligence (OBI) menu captures key data for 
+  troubleshooting and analysis using collectors, scripts, OS commands, etc.
+    
+  Select one of the following options:
+    (1) Preinstall
+    (2) Enterprise Edition - excluding Weblogic Server data
+    (3) Enterprise Edition - including Weblogic Server data
+    (4) Publisher 10g 
+    (5) Data Warehouse Administration Console 
+    (6) Informatica-related 
+	
+    (M)ain    (B)ack    (H)elp    (E)xit
+    
+   
+   </pre>
+                  <p class="c9"><a href="#" id="help3-show" class="showLink" onclick="toggleHelp('help3');"><b>[+]</b> Toggle Help</a>
+                     <div id="help3" class="more"><b>Showing Menu Help:</b>
+                        <pre>
+  DA: Oracle Business Intelligence (OBI) Collectors Help
+     
+  The Oracle Business Intelligence (OBI) Collectors menu ...
+    
+  Explanation of available options:
+    (1) Preinstall
+    (2) Enterprise Edition - excluding Weblogic Server data
+    (3) Enterprise Edition - including Weblogic Server data
+    (4) Publisher 10g 
+    (5) Data Warehouse Administration Console 
+    (6) Informatica-related 
+    
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap11-show" class="showLink" onclick="showHide('menumap11');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap11" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_200</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_200</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_200">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap11-hide" class="hideLink" onclick="showHide('menumap11');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap12-show" class="showLink" onclick="showHide('menumap12');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap12" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_202</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_202</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_202">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap12-hide" class="hideLink" onclick="showHide('menumap12');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap13-show" class="showLink" onclick="showHide('menumap13');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap13" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:rda_204</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_204</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_204">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap13-hide" class="hideLink" onclick="showHide('menumap13');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 4&nbsp;  - &nbsp;<a href="#" id="menumap14-show" class="showLink" onclick="showHide('menumap14');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap14" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>4:command:rda_206</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_206</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_206">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap14-hide" class="hideLink" onclick="showHide('menumap14');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 5&nbsp;  - &nbsp;<a href="#" id="menumap15-show" class="showLink" onclick="showHide('menumap15');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap15" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>5:command:rda_208</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>5</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_208</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_208">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap15-hide" class="hideLink" onclick="showHide('menumap15');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 6&nbsp;  - &nbsp;<a href="#" id="menumap16-show" class="showLink" onclick="showHide('menumap16');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap16" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>6:command:rda_210</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>6</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_210</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_210">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap16-hide" class="hideLink" onclick="showHide('menumap16');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap17-show" class="showLink" onclick="showHide('menumap17');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap17" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap17-hide" class="hideLink" onclick="showHide('menumap17');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap18-show" class="showLink" onclick="showHide('menumap18');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap18" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap18-hide" class="hideLink" onclick="showHide('menumap18');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="startAll"></a>startAll - EPM Setting the Environment</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  ????
+    
+  Select one of the following options:
+    (1)  Stop ALL EPM Applications
+    (2)  Start ALL EPM Applications
+    (3)  Start Weblogic Server
+	
+    (M)ain    (B)ack    (H)elp    (E)xit
+  
+   
+   </pre>
+                  <p class="c9"><a href="#" id="help4-show" class="showLink" onclick="toggleHelp('help4');"><b>[+]</b> Toggle Help</a>
+                     <div id="help4" class="more"><b>Showing Menu Help:</b>
+                        <pre>
+  EPM Setting the environment Help
+
+  Explanation of available options:
+    (1)  Stop ALL EPM Applications
+    
+    (2)  Start ALL EPM Applications
+    
+    (3)  Start Weblogic Server
+          
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap19-show" class="showLink" onclick="showHide('menumap19');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap19" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:os_300</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>os_300</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#os_300">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap19-hide" class="hideLink" onclick="showHide('menumap19');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap20-show" class="showLink" onclick="showHide('menumap20');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap20" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:os_302</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>os_302</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#os_302">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap20-hide" class="hideLink" onclick="showHide('menumap20');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap21-show" class="showLink" onclick="showHide('menumap21');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap21" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:os_304</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>os_304</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#os_304">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap21-hide" class="hideLink" onclick="showHide('menumap21');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap22-show" class="showLink" onclick="showHide('menumap22');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap22" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:baEPMmain</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>baEPMmain</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#baEPMmain">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap22-hide" class="hideLink" onclick="showHide('menumap22');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap23-show" class="showLink" onclick="showHide('menumap23');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap23" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap23-hide" class="hideLink" onclick="showHide('menumap23');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="PostInstall"></a>PostInstall - EPM Post Install Collectors </td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  ????
+    
+  Select one of the following options:
+    (1)  Oracle Essbase
+    (2)  EPM System and Architecture
+    (3)  Calculation Manager
+    (4)  Data Relationship Management
+    (5)  Financial Management
+    (6)  Reporting
+    (7)  Planning 
+    (8)  Services - Provider and Shared
+    (9)  Smart View
+    (10) Web Analysis
+	
+    (M)ain    (B)ack    (H)elp    (E)xit
+  
+   
+   </pre>
+                  <p class="c9"><a href="#" id="help5-show" class="showLink" onclick="toggleHelp('help5');"><b>[+]</b> Toggle Help</a>
+                     <div id="help5" class="more"><b>Showing Menu Help:</b>
+                        <pre>
+  EPM Post Install Collectors
+
+  Explanation of available options:
+    (1)  Oracle Essbase
+    (2)  EPM System and Architecture
+    (3)  Calculation Manager
+    (4)  Data Relationship Management
+    (5)  Financial Management
+    (6)  Reporting
+    (7)  Planning 
+    (8)  Services - Provider and Shared
+    (9)  Smart View
+    (10) Web Analysis
+          
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap24-show" class="showLink" onclick="showHide('menumap24');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap24" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:menu:Sbase</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Sbase</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Sbase">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap24-hide" class="hideLink" onclick="showHide('menumap24');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap25-show" class="showLink" onclick="showHide('menumap25');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap25" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:menu:Info</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Info</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Info">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap25-hide" class="hideLink" onclick="showHide('menumap25');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap26-show" class="showLink" onclick="showHide('menumap26');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap26" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:rda_104</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_104</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_104">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap26-hide" class="hideLink" onclick="showHide('menumap26');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 4&nbsp;  - &nbsp;<a href="#" id="menumap27-show" class="showLink" onclick="showHide('menumap27');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap27" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>4:menu:DataRel</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>DataRel</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#DataRel">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap27-hide" class="hideLink" onclick="showHide('menumap27');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 5&nbsp;  - &nbsp;<a href="#" id="menumap28-show" class="showLink" onclick="showHide('menumap28');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap28" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>5:menu:FinMgmt</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>5</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>FinMgmt</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#FinMgmt">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap28-hide" class="hideLink" onclick="showHide('menumap28');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 6&nbsp;  - &nbsp;<a href="#" id="menumap29-show" class="showLink" onclick="showHide('menumap29');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap29" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>6:menu:Reports</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>6</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Reports</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Reports">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap29-hide" class="hideLink" onclick="showHide('menumap29');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 7&nbsp;  - &nbsp;<a href="#" id="menumap30-show" class="showLink" onclick="showHide('menumap30');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap30" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>7:command:rda_106</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>7</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_106</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_106">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap30-hide" class="hideLink" onclick="showHide('menumap30');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 8&nbsp;  - &nbsp;<a href="#" id="menumap31-show" class="showLink" onclick="showHide('menumap31');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap31" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>8:menu:Services</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>8</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Services</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Services">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap31-hide" class="hideLink" onclick="showHide('menumap31');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 9&nbsp;  - &nbsp;<a href="#" id="menumap32-show" class="showLink" onclick="showHide('menumap32');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap32" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>9:command:rda_108</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>9</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_108</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_108">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap32-hide" class="hideLink" onclick="showHide('menumap32');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 10&nbsp;  - &nbsp;<a href="#" id="menumap33-show" class="showLink" onclick="showHide('menumap33');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap33" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>10:command:rda_110</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>10</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_110</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_110">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap33-hide" class="hideLink" onclick="showHide('menumap33');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap34-show" class="showLink" onclick="showHide('menumap34');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap34" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:baEPMmain</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>baEPMmain</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#baEPMmain">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap34-hide" class="hideLink" onclick="showHide('menumap34');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap35-show" class="showLink" onclick="showHide('menumap35');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap35" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap35-hide" class="hideLink" onclick="showHide('menumap35');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="Sbase"></a>Sbase - Essbase Data Collections</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  This menu collects data related to Essbase.
+  
+  Select one of the following options:
+    (1) Oracle Essbase - 11.1.2.x and higher 
+    (2) Oracle Essbase - Pre 11.1.2.x 
+    (3) Oracle Essbase Administration Services - 11.1.2.x and higher 
+    
+    (M)ain    (B)ack    (H)elp    (E)xit  
+    
+   
+   </pre>
+                  <p class="c9"><a href="#" id="help6-show" class="showLink" onclick="toggleHelp('help6');"><b>[+]</b> Toggle Help</a>
+                     <div id="help6" class="more"><b>Showing Menu Help:</b>
+                        <pre> Essbase Help
+
+  This option ...
+      
+  Explanation of available options:
+ 
+    (1) 11.1.2.x and higher Oracle Essbase
+        o Executes RDA profile = Hyperion1112_ESS
+        o The Hyperion1112_ESS profile uses the following modules:
+            WREQ  Handles the Oracle WebLogic Server Collection Requests	
+            IREQ  Handles the Oracle Instance Collection Requests	
+            EPM   Collects Enterprise Performance Management System Information	
+            ESS   Collects Oracle Essbase Information
+            
+    (2) Pre 11.1.2 Oracle Essbase
+        o Executes RDA profile = Essbase
+        o The Essbase profile uses the following modules:
+            OS    Collects the Operating System Information	
+            PROF  Collects the User Profile	
+            PERF  Collects Performance Information	
+            NET   Collects Network Information	
+            ESS   Collects Oracle Essbase Information
+            
+    (3) 11.1.2.x and higher Oracle Essbase Administration Services
+        o Executes RDA profile = Hyperion1112_EAS
+        o The Hyperion1112_EAS profile uses the following modules:
+            WREQ  Handles the Oracle WebLogic Server Collection Requests
+            IREQ  Handles the Oracle Instance Collection Requests
+            EPM   Collects Enterprise Performance Management System Information
+            EAS   Collects Oracle Essbase Administration Services Information
+            
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap36-show" class="showLink" onclick="showHide('menumap36');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap36" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_120</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_120</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_120">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap36-hide" class="hideLink" onclick="showHide('menumap36');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap37-show" class="showLink" onclick="showHide('menumap37');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap37" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_124</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_124</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_124">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap37-hide" class="hideLink" onclick="showHide('menumap37');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap38-show" class="showLink" onclick="showHide('menumap38');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap38" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:rda_122</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_122</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_122">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap38-hide" class="hideLink" onclick="showHide('menumap38');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap39-show" class="showLink" onclick="showHide('menumap39');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap39" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap39-hide" class="hideLink" onclick="showHide('menumap39');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap40-show" class="showLink" onclick="showHide('menumap40');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap40" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:PostInstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>PostInstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#PostInstall">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap40-hide" class="hideLink" onclick="showHide('menumap40');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="Info"></a>Info - EPM General</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>          
+  This menu contains ...
+   
+  Select one of the following options:
+    (1) Architecture - 11.1.2.x 
+    (2) Architecture - Pre 11.1.2.x  
+    (3) System - 11.1.2.x  
+      
+    (M)ain    (B)ack    (H)elp    (E)xit  
+    
+   
+   </pre>
+                  <p class="c9"><a href="#" id="help7-show" class="showLink" onclick="toggleHelp('help7');"><b>[+]</b> Toggle Help</a>
+                     <div id="help7" class="more"><b>Showing Menu Help:</b>
+                        <pre>EPM General Help
+
+  This option invokes ...
+  
+  Explanation of available options:		
+   (1) System 11.1.2.x-related problems
+        o Executes RDA profile = Hyperion1112_EPM
+        o The Hyperion1112_EPM profile uses the following modules:
+            INST   Collects the Oracle Installation Information	
+            WREQ   Handles the Oracle WebLogic Server Collection Requests	
+            IREQ   Handles the Oracle Instance Collection Requests	
+            EPM    Collects EPM System Information
+		  
+    (2) Architecture Problems - focuses on EPM data only
+        o Executes RDA profile = Hyperion1112_EPMA
+        o The Hyperion1112_EPMA profile uses the following modules:
+            WREQ   Handles the Oracle WebLogic Server Collection Requests	
+            IREQ   Handles the Oracle Instance Collection Requests	
+            EPM    Collects EPM System Information
+            
+    (3) Architect Problems - includes EPM system and key environment data
+        o Executes RDA profile = EPMA_FullRun
+        o The EPMA_FullRun profile uses the following modules:
+            OS     Collects the Operating System Information	
+            PROF   Collects the User Profile	
+            PERF   Collects Performance Information	
+            NET    Collects Network Information	
+            ONET   Collects Oracle Net Information	
+            INST   Collects the Oracle Installation Information	
+            WREQ   Handles the Oracle WebLogic Server Collection Requests	
+            EPMA   Collects EPM Architect Information   
+	
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap41-show" class="showLink" onclick="showHide('menumap41');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap41" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_130</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_130</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_130">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap41-hide" class="hideLink" onclick="showHide('menumap41');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap42-show" class="showLink" onclick="showHide('menumap42');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap42" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_134</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_134</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_134">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap42-hide" class="hideLink" onclick="showHide('menumap42');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap43-show" class="showLink" onclick="showHide('menumap43');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap43" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:rda_132</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_132</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_132">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap43-hide" class="hideLink" onclick="showHide('menumap43');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap44-show" class="showLink" onclick="showHide('menumap44');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap44" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap44-hide" class="hideLink" onclick="showHide('menumap44');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap45-show" class="showLink" onclick="showHide('menumap45');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap45" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:PostInstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>PostInstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#PostInstall">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap45-hide" class="hideLink" onclick="showHide('menumap45');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="DataRel"></a>DataRel - EPM Data Relationships</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>          
+  This menu contains ...
+   
+  Select one of the following options:
+    (1) Data Relationship Management - 11.1.2.x and higher 
+    (2) Data Relationship Management - Pre 11.1.2.x 
+      
+    (M)ain    (B)ack    (H)elp    (E)xit  
+    
+   
+   </pre>
+                  <p class="c9"><a href="#" id="help8-show" class="showLink" onclick="toggleHelp('help8');"><b>[+]</b> Toggle Help</a>
+                     <div id="help8" class="more"><b>Showing Menu Help:</b>
+                        <pre>EPM Data Relationships Help
+
+  This option invokes ...
+  
+  Explanation of available options:
+    (1) Oracle Hyperion Data Relationship Management 11.1.2.x-related problems
+        o Executes RDA profile = Hyperion1112_HDRM
+        o The Hyperion1112_HDRM profile uses the following modules:
+            WREQ  Handles the Oracle WebLogic Server Collection Requests	
+            IREQ  Handles the Oracle Instance Collection Requests	
+            EPM   Collects Enterprise Performance Management System Information	
+            HDRM  Collects Hyperion Data Relationship Management Information
+            
+    (2) Oracle Hyperion Data Relationship Management Pre 11.1.2.x-related 
+        problems
+        o Executes RDA profile = Hyperion_DRM
+        o The Hyperion_DRM profile uses the following modules:
+            OS    Collects the Operating System Information	
+            PROF  Collects the User Profile	
+            PERF  Collects Performance Information	
+            NET   Collects Network Information	
+            HDRM  Collects Hyperion Data Relationship Management Information
+	
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap46-show" class="showLink" onclick="showHide('menumap46');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap46" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_140</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_140</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_140">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap46-hide" class="hideLink" onclick="showHide('menumap46');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap47-show" class="showLink" onclick="showHide('menumap47');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap47" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_142</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_142</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_142">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap47-hide" class="hideLink" onclick="showHide('menumap47');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap48-show" class="showLink" onclick="showHide('menumap48');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap48" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap48-hide" class="hideLink" onclick="showHide('menumap48');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap49-show" class="showLink" onclick="showHide('menumap49');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap49" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:PostInstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>PostInstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#PostInstall">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap49-hide" class="hideLink" onclick="showHide('menumap49');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="FinMgmt"></a>FinMgmt - EPM Financial Management</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>          
+  This menu contains ...
+   
+  Select one of the following options:
+    (1) Financial Management - 11.1.2.x and higher  
+    (2) Financial Management - Pre 11.1.2.x 
+    (3) Financial Close Management - 11.1.2.x and higher
+    (4) Financial Close Management - Pre 11.1.2.x 
+      
+    (M)ain    (B)ack    (H)elp    (E)xit  
+    
+   
+   </pre>
+                  <p class="c9"><a href="#" id="help9-show" class="showLink" onclick="toggleHelp('help9');"><b>[+]</b> Toggle Help</a>
+                     <div id="help9" class="more"><b>Showing Menu Help:</b>
+                        <pre>EPM Financial Management Help
+
+  This option invokes ...
+  
+  Explanation of available options:
+    (1) 11.1.2.x and higher Financial Management
+        o Executes RDA profile = Hyperion1112_HFM
+        o This profile includes the following modules:
+            WREQ    Handles the Oracle WebLogic Server Collection Requests	
+            IREQ    Handles the Oracle Instance Collection Requests	
+            EPM     Collects EPM System Information	
+            HFM     Collects Oracle Hyperion Financial Management Information
+            
+    (2) 11.1.2.x and higher Financial Close Management
+        o Executes RDA profile = Hyperion1112_FCM
+        o This profile includes the following modules:
+            WREQ    Handles the Oracle WebLogic Server Collection Requests	
+            IREQ    Handles the Oracle Instance Collection Requests	
+            EPM     Collects EPM System Information	
+            FCM     Collects Oracle Hyperion Financial Close Mgmt Information
+
+	(3) Pre 11.1.2.x Financial Management
+        o Executes RDA profile = HFM_FullRun
+        o This profile includes the following modules:
+            OS      Collects the Operating System Information	
+    	    PROF   	Collects the User Profile	
+    	    PERF    Collects Performance Information	
+    	    NET    	Collects Network Information	
+    	    ONET   	Collects Oracle Net Information	
+    	    INST   	Collects the Oracle Installation Information	
+    	    WREQ   	Handles the Oracle WebLogic Server Collection Requests	
+    	    HFM    	Collects Oracle Hyperion Financial Management Information
+            
+    (4) Pre 11.1.2.x Financial Close Management
+        o Executes RDA profile = FCM_FullRun
+        o This profile includes the following modules:
+            OS      Collects the Operating System Information	
+    	    PROF   	Collects the User Profile	
+    	    PERF    Collects Performance Information	
+    	    NET    	Collects Network Information	
+    	    ONET   	Collects Oracle Net Information	
+    	    INST   	Collects the Oracle Installation Information	
+    	    DBA    	Collects Oracle RDBMS Information	
+    	    WREQ   	Handles the Oracle WebLogic Server Collection Requests	
+    	    FCM    	Collects Oracle Hyperion Financial Close Mgmt Information
+            
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap50-show" class="showLink" onclick="showHide('menumap50');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap50" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_150</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_150</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_150">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap50-hide" class="hideLink" onclick="showHide('menumap50');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap51-show" class="showLink" onclick="showHide('menumap51');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap51" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_154</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_154</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_154">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap51-hide" class="hideLink" onclick="showHide('menumap51');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap52-show" class="showLink" onclick="showHide('menumap52');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap52" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:rda_152</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_152</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_152">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap52-hide" class="hideLink" onclick="showHide('menumap52');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 4&nbsp;  - &nbsp;<a href="#" id="menumap53-show" class="showLink" onclick="showHide('menumap53');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap53" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>4:command:rda_156</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_156</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_156">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap53-hide" class="hideLink" onclick="showHide('menumap53');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap54-show" class="showLink" onclick="showHide('menumap54');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap54" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap54-hide" class="hideLink" onclick="showHide('menumap54');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap55-show" class="showLink" onclick="showHide('menumap55');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap55" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:PostInstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>PostInstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#PostInstall">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap55-hide" class="hideLink" onclick="showHide('menumap55');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="Reports"></a>Reports - EPM Reports</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>          
+  This menu contains ...
+   
+  Select one of the following options:
+    (1) Hyperion Financial Reporting - 11.1.2.x and higher 
+    (2) Hyperion Financial Reporting - Pre 11.1.2.x Oracle 
+    (3) Hyperion Interactive Reporting - 11.1.2.x and higher 
+    (4) Hyperion SQR Production Reporting - 11.1.2.x and higher 
+      
+    (M)ain    (B)ack    (H)elp    (E)xit  
+
+   
+   </pre>
+                  <p class="c9"><a href="#" id="help10-show" class="showLink" onclick="toggleHelp('help10');"><b>[+]</b> Toggle Help</a>
+                     <div id="help10" class="more"><b>Showing Menu Help:</b>
+                        <pre>EPM Data Relationships Help
+
+  This option invokes ...
+  
+  Explanation of available options:
+    (1) 11.1.2.x and higher Hyperion Financial Reporting
+        o Executes RDA profile = Hyperion1112_HFR
+        o The Hyperion1112_HFR profile uses the following modules:
+    	    NET     Collects Network Information	
+    	    WREQ    Handles the Oracle WebLogic Server Collection Requests	
+    	    IREQ    Handles the Oracle Instance Collection Requests	
+    	    EPM     Collects EPM System Information	
+    	    HFR     Collects Oracle Hyperion Financial Reporting Information
+            
+    (2) Pre 11.1.2.x Hyperion Financial Reporting
+        o Executes RDA profile = FinancialReporting
+        o The FinancialReporting profile uses the following modules:
+            OS      Collects the Operating System Information	
+            PROF    Collects the User Profile	
+            PERF    Collects Performance Information	
+            NET     Collects Network Information	
+            HFR     Collects Oracle Hyperion Financial Reporting Information
+            
+    (3) 11.1.2.x and higher Hyperion Interactive Reporting
+        o Executes RDA profile = Hyperion1112_HIR
+        o The Hyperion1112_HIR profile uses the following modules:
+            WREQ    Handles the Oracle WebLogic Server Collection Requests	
+            IREQ    Handles the Oracle Instance Collection Requests	
+            EPM     Collects EPM System Information	
+            HIR     Collects Oracle Hyperion Interactive Reporting Information
+          
+    (4) 11.1.2.x and higher Hyperion SQR Production Reporting
+        o Executes RDA profile = Hyperion1112_PR
+        o The Hyperion1112_PR profile uses the following modules:
+            WREQ    Handles the Oracle WebLogic Server Collection Requests	
+            IREQ    Handles the Oracle Instance Collection Requests	
+            EPM     Collects EPM System Information	
+            PR      Collects Oracle Hyperion SQR Production Reporting Info
+    
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap56-show" class="showLink" onclick="showHide('menumap56');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap56" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_160</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_160</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_160">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap56-hide" class="hideLink" onclick="showHide('menumap56');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap57-show" class="showLink" onclick="showHide('menumap57');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap57" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_162</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_162</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_162">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap57-hide" class="hideLink" onclick="showHide('menumap57');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap58-show" class="showLink" onclick="showHide('menumap58');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap58" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:rda_164</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_164</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_164">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap58-hide" class="hideLink" onclick="showHide('menumap58');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 4&nbsp;  - &nbsp;<a href="#" id="menumap59-show" class="showLink" onclick="showHide('menumap59');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap59" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>4:command:rda_166</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_166</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_166">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap59-hide" class="hideLink" onclick="showHide('menumap59');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap60-show" class="showLink" onclick="showHide('menumap60');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap60" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap60-hide" class="hideLink" onclick="showHide('menumap60');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap61-show" class="showLink" onclick="showHide('menumap61');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap61" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:PostInstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>PostInstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#PostInstall">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap61-hide" class="hideLink" onclick="showHide('menumap61');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="Services"></a>Services - EPM Services</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>          
+  This menu contains ...
+   
+  Select one of the following options:
+    (1) Provider Services - 11.1.2.x and higher 
+    (2) Shared Services - 11.1.2.x and higher  
+      
+    (M)ain    (B)ack    (H)elp    (E)xit  
+
+   
+   </pre>
+                  <p class="c9"><a href="#" id="help11-show" class="showLink" onclick="toggleHelp('help11');"><b>[+]</b> Toggle Help</a>
+                     <div id="help11" class="more"><b>Showing Menu Help:</b>
+                        <pre>EPM Services Help
+
+  This option invokes ...
+  
+  Explanation of available options:
+    (1) 11.1.2.x and higher Provider Services
+        o Executes RDA profile = Hyperion1112_HPSV
+        o The Hyperion1112_HDRM profile uses the following modules:
+            WREQ    Handles the Oracle WebLogic Server Collection Requests	
+            IREQ    Handles the Oracle Instance Collection Requests	
+            EPM     Collects EPM System Information	
+            HPSV    Collects Oracle Hyperion Provider Services Information
+            
+    (2) 11.1.2.x and higher Shared Services 
+        o Executes RDA profile = Hyperion1112_HSS
+        o The Hyperion_DRM profile uses the following modules:
+            NET     Collects Network Information	
+            WREQ    Handles the Oracle WebLogic Server Collection Requests	
+            IREQ    Handles the Oracle Instance Collection Requests	
+            EPM     Collects EPM System Information	
+            HSS     Collects Oracle Hyperion Shared Services Information
+            
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap62-show" class="showLink" onclick="showHide('menumap62');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap62" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_170</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_170</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_170">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap62-hide" class="hideLink" onclick="showHide('menumap62');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap63-show" class="showLink" onclick="showHide('menumap63');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap63" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_172</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_172</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_172">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap63-hide" class="hideLink" onclick="showHide('menumap63');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap64-show" class="showLink" onclick="showHide('menumap64');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap64" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap64-hide" class="hideLink" onclick="showHide('menumap64');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap65-show" class="showLink" onclick="showHide('menumap65');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap65" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:PostInstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>PostInstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#PostInstall">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap65-hide" class="hideLink" onclick="showHide('menumap65');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_100"></a>rda_100</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE EPM Pre-Install: Server</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary 
+    This test module is targeted at Oracle Enterprise Performance 
+	Management 11.1.2 Server and executes the "A544EPM1112_gen" rule set 
+	preinstall server health checks.
+	
+    This command is valid for all platforms.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A544EPM1112_gen" rules set as a report
+    o Removes all previous reports for the rule set 
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>custom -yT hcve:A544EPM1112_gen</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_102"></a>rda_102</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE Pre-Install: Client</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary 
+    This test module is targeted at Oracle Enterprise Performance
+	Management 11.1.2 Client and executes the "A545EPM1112_win" 
+	rule set preinstall client health checks.
+	
+    This command is currently valid for the following platforms:
+      o Windows
+    A message will display if run on a platform not listed above.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A545EPM1112_win" rules set as a report
+    o Removes all previous reports for the rule set 
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_hcve=A545EPM1112</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_104"></a>rda_104</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Calculation Manager</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary 
+    This command executes the Hyperion1112_HCM RDA profile designed for
+	Oracle Hyperion Calculation Manager 11.1.2.x-related problems.
+    The Hyperion1112_HCM profile uses the following modules:
+    	  WREQ      	Handles the Oracle WebLogic Server Collection Requests	
+    	  IREQ      	Handles the Oracle Instance Collection Requests	
+    	  EPM       	Collects Enterprise Performance Management System Information	
+    	  HCM       	Collects Oracle Hyperion Calculation Manager Information
+    
+  Input Requirements
+    o Web Server application type
+        1 OC4J
+        2 Oracle Weblogic Server
+        3 IBM WebSphere
+    o 
+    
+  Output Details
+    o ...
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">command_prompt1<b>: </b>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2"><i>PREREQ_was_type|Enter a specific instance by number|PREREQ_was_type:name</i>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">command_prompt2<b>: </b>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2"><i>INSTANCENAME|Please enter Instance:|*</i>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">command_prompt3<b>: </b>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2"><i>PREREQ_domains|Enter a specific domain by number|PREREQ_domains:value</i>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">command_prompt4<b>: </b>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2"><i>PREREQ_Domain_Server|Enter a specific server for domain %%PREREQ_domains%%|PREREQ_Domain_Server:value</i>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_HCM EPM_WAS_TYPE=%%PREREQ_was_type%% EPM_SELECTION=%%INSTANCENAME%% DOMAIN=%%PREREQ_domains%% SERVERS=%%PREREQ_Domain_Server%%</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="PREREQ_was_type"></a>PREREQ_was_type</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>OS</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>LOV:Web Application Server Types</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>TODO</pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+      echo OC4J
+      echo Oracle Weblogic Server
+      echo IBM WebSphere
+    </pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="PREREQ_instance_list"></a>PREREQ_instance_list</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>System</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>LOV: List Instances</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>TODO</pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>wls_lovs instances</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="c"></a>c</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>System</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Internal Only LOV: Pick Domains</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>TODO</pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>wls_lovs domains</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="PREREQ_Domain_Server"></a>PREREQ_Domain_Server</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>System</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Internal Only LOV: Pick Servers from Domain</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>TODO</pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>wls_lovs servers domain=%%PREREQ_301%%</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_106"></a>rda_106</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Planning</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary 
+    This command executes the Hyperion1112_HPL RDA profile designed for
+	Oracle Hyperion Planning 11.1.2.x-related problems.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o ...
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_HPL</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_108"></a>rda_108</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Smart View</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary 
+    This command executes the Hyperion1112_HSV RDA profile designed for
+    Oracle Hyperion Smart View 11.1.2.x-related problems.
+	
+  Input Requirements
+    o None
+    
+  Output Details
+    o ...
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_HSV</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_110"></a>rda_110</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Web Analysis</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary 
+    This command executes the Hyperion1112_HWA RDA profile designed for
+    Oracle Hyperion Web Analysis 11.1.2.x related problems.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o ...
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_HWA</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_120"></a>rda_120</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Hyperion1112_ESS</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    The Hyperion1112_ESS profile uses the following modules:
+    	 WREQ      	Handles the Oracle WebLogic Server Collection Requests	
+    	 IREQ      	Handles the Oracle Instance Collection Requests	
+    	 EPM       	Collects Enterprise Performance Management System Information	
+    	 ESS       	Collects Oracle Essbase Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+
+        ...
+      
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_ESS</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_122"></a>rda_122</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Hyperion1112_EAS</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    The Hyperion1112_EAS profile uses the following modules:
+        WREQ  Handles the Oracle WebLogic Server Collection Requests	
+        IREQ  Handles the Oracle Instance Collection Requests	
+        EPM   Collects Enterprise Performance Management System Information	
+        EAS   Collects Oracle Essbase Administration Services Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+      
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_EAS</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_124"></a>rda_124</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>RDA Profile:Essbase</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    The Essbase profile uses the following modules:
+    	 OS        	Collects the Operating System Information	
+    	 PROF      	Collects the User Profile	
+    	 PERF      	Collects Performance Information	
+    	 NET       	Collects Network Information	
+    	 ESS       	Collects Oracle Essbase Information    
+		 
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+      
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Essbase</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_130"></a>rda_130</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Hyperion1112_EPMA</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the Hyperion1112_EPMA RDA profile designed for
+    Architecture Problems - focuses on EPM data only.
+
+    The Hyperion1112_EPMA profile uses the following modules:
+      WREQ   Handles the Oracle WebLogic Server Collection Requests	
+      IREQ   Handles the Oracle Instance Collection Requests	
+      EPM    Collects EPM System Information	
+      EPMA   Collects EPM Architect Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_EPMA</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_132"></a>rda_132</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Hyperion1112_EPM</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the Hyperion1112_EPMA RDA profile designed for
+    System 11.1.2.x-related problems.
+
+    The Hyperion1112_EPM profile uses the following modules:
+      INST   Collects the Oracle Installation Information	
+      WREQ   Handles the Oracle WebLogic Server Collection Requests	
+      IREQ   Handles the Oracle Instance Collection Requests	
+      EPM    Collects EPM System Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+      
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_EPM</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_134"></a>rda_134</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>EPMA_FullRun</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the EPMA_FullRun RDA profile designed for
+    Architect-related problems.
+    This profile includes the following RDA modules:
+      OS     Collects the Operating System Information	
+      PROF   Collects the User Profile	
+      PERF   Collects Performance Information	
+      NET    Collects Network Information	
+      ONET   Collects Oracle Net Information	
+      INST   Collects the Oracle Installation Information	
+      WREQ   Handles the Oracle WebLogic Server Collection Requests	
+      EPMA   Collects EPM Architect Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+      
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=EPMA_FullRun</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_140"></a>rda_140</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Hyperion1112_HDRM</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the Hyperion1112_HDRM RDA profile designed for
+    Oracle Hyperion Data Relationship Management 11.1.2.x-related problems
+    
+    This profile includes the following RDA modules:
+      WREQ    Handles the Oracle WebLogic Server Collection Requests	
+      IREQ    Handles the Oracle Instance Collection Requests	
+      EPM     Collects Enterprise Performance Management System Information	
+      HDRM    Collects Hyperion Data Relationship Management Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+      
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_HDRM</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_142"></a>rda_142</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Hyperion_DRM</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the Hyperion_DRM RDA profile designed for
+    Oracle Hyperion Data Relationship Management-related problems.
+
+    This profile includes the following RDA modules:
+      OS      Collects the Operating System Information	
+      PROF    Collects the User Profile	
+      PERF    Collects Performance Information	
+      NET     Collects Network Information	
+      HDRM    Collects Hyperion Data Relationship Management Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion_DRM</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_150"></a>rda_150</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Hyperion1112_HFM</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the Hyperion1112_HFM RDA profile designed for
+    Oracle Hyperion 11.1.2.x and higher Financial Management related problems.
+
+    This profile includes the following RDA modules:
+      WREQ    Handles the Oracle WebLogic Server Collection Requests	
+      IREQ    Handles the Oracle Instance Collection Requests	
+      EPM     Collects EPM System Information	
+      HFM     Collects Oracle Hyperion Financial Management Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_HFM</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_152"></a>rda_152</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HFM_FullRun</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the HFM_FullRun RDA profile designed for
+    Oracle Hyperion Pre 11.1.2.x Financial Management related problems.
+
+    This profile includes the following RDA modules:
+      OS      Collects the Operating System Information	
+      PROF    Collects the User Profile	
+      PERF    Collects Performance Information	
+      NET     Collects Network Information	
+      ONET    Collects Oracle Net Information	
+      INST    Collects the Oracle Installation Information	
+      WREQ    Handles the Oracle WebLogic Server Collection Requests	
+      HFM     Collects Oracle Hyperion Financial Management Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=HFM_FullRun</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_154"></a>rda_154</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Hyperion1112_FCM</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the Hyperion1112_FCM RDA profile designed for
+    Oracle Hyperion 11.1.2.x and higher Financial Close Management 
+    related problems.
+
+    This profile includes the following RDA modules:
+      WREQ    Handles the Oracle WebLogic Server Collection Requests	
+      IREQ    Handles the Oracle Instance Collection Requests	
+      EPM     Collects EPM System Information	
+      FCM     Collects Oracle Hyperion Financial Close Mgmt Information 
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_FCM</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_156"></a>rda_156</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>FCM_FullRun</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the FCM_FullRun RDA profile designed for
+    Oracle Hyperion Pre 11.1.2.x Financial Close Management 
+    related problems.
+
+    This profile includes the following RDA modules:
+      OS      Collects the Operating System Information	
+      PROF    Collects the User Profile	
+      PERF    Collects Performance Information	
+      NET     Collects Network Information		
+      ONET    Collects Oracle Net Information	
+      INST    Collects the Oracle Installation Information	
+      DBA     Collects Oracle RDBMS Information	
+      WREQ    Handles the Oracle WebLogic Server Collection Requests	
+      FCM     Collects Oracle Hyperion Financial Close Mgmt Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=FCM_FullRun</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_160"></a>rda_160</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Hyperion1112_HFR</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the Hyperion1112_HFR RDA profile designed for
+    Oracle Hyperion 11.1.2.x and higher Financial Reporting related problems.
+
+    This profile includes the following RDA modules:
+      NET     Collects Network Information	
+      WREQ    Handles the Oracle WebLogic Server Collection Requests	
+      IREQ    Handles the Oracle Instance Collection Requests	
+      EPM     Collects EPM System Information	
+      HFR     Collects Oracle Hyperion Financial Reporting Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_HFR</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_162"></a>rda_162</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>FinancialReporting</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the FinancialReporting RDA profile designed for
+    Pre 11.1.2.x Oracle Hyperion Financial Reporting related problems.
+
+    This profile includes the following RDA modules:
+      OS      Collects the Operating System Information	
+      PROF    Collects the User Profile	
+      PERF    Collects Performance Information	
+      NET     Collects Network Information	
+      HFR     Collects Oracle Hyperion Financial Reporting Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=FinancialReporting</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_164"></a>rda_164</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Hyperion1112_HIR</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the Hyperion1112_HIR RDA profile designed for
+    11.1.2.x and higher Oracle Hyperion Interactive Reporting 
+    related problems.
+
+    This profile includes the following RDA modules:
+      WREQ    Handles the Oracle WebLogic Server Collection Requests	
+      IREQ    Handles the Oracle Instance Collection Requests	
+      EPM     Collects EPM System Information	
+      HIR     Collects Oracle Hyperion Interactive Reporting Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_HIR</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_166"></a>rda_166</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Hyperion1112_PR</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the Hyperion1112_PR RDA profile designed for
+    11.1.2.x and higher Oracle Hyperion SQR Production Reporting 
+    related problems.
+
+    This profile includes the following RDA modules:
+      WREQ    Handles the Oracle WebLogic Server Collection Requests	
+      IREQ    Handles the Oracle Instance Collection Requests	
+      EPM     Collects EPM System Information	
+      PR      Collects Oracle Hyperion SQR Production Reporting Info
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_PR</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_170"></a>rda_170</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Hyperion1112_HPSV</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the Hyperion1112_HPSV RDA profile designed for
+    11.1.2.x and higher Provider Services related problems.
+
+    This profile includes the following RDA modules:
+      WREQ    Handles the Oracle WebLogic Server Collection Requests	
+      IREQ    Handles the Oracle Instance Collection Requests	
+      EPM     Collects EPM System Information	
+      HPSV    Collects Oracle Hyperion Provider Services Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_HPSV</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_172"></a>rda_172</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Hyperion1112_HSS</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the Hyperion1112_HSS RDA profile designed for
+    11.1.2.x and higher Shared Services related problems.
+
+    This profile includes the following RDA modules:
+      NET     Collects Network Information	
+      WREQ    Handles the Oracle WebLogic Server Collection Requests	
+      IREQ    Handles the Oracle Instance Collection Requests	
+      EPM     Collects EPM System Information	
+      HSS     Collects Oracle Hyperion Shared Services Information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=Hyperion1112_HSS</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_200"></a>rda_200</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE OBI Pre-Install</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary 
+    This health check module is targeted at Oracle Business Intelligence 
+	Enterprise Edition 11.1.1 Preinstall and executes the "A397BI1111_gen" 
+    rule set.
+    
+    This command is valid for all platforms.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A397BI1111_gen" rules set as a report
+    o Removes all previous reports for the rule set 
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>custom -yT hcve:A397BI1111_gen</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_202"></a>rda_202</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>OBI Enterprise Edition - No WLS</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the FM11g_Bi RDA profile designed to collect
+    Oracle Business Intelligence Enterprise Edition information.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=FM11g_Bi</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_204"></a>rda_204</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>OBI Enterprise Edition - With WLS</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the FM11g_WlsBi RDA profile designed to collect
+    Oracle Business Intelligence Enterprise Edition information.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_profile=FM11g_WlsBi</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_206"></a>rda_206</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>OBI Publisher Info</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the BIPL RDA module designed to collect Oracle
+    Buisiness Intelligence Publisher information.
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_module=BIPL</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_208"></a>rda_208</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Data Warehouse Console Info</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the DAC RDA module designed to collect Data 
+    Warehouse Administration Console Information.
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_module=DAC</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_210"></a>rda_210</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>OBI Infomatica Related Data</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This command executes the INFA RDA module designed to collect Informatica
+    information for Oracle Business Intelligence Applications.
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Example
+        ...
+ 
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_module=INFA</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="os_300"></a>os_300</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>OS</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Stop All EPM Apps</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary 
+    This command ...
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o 
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+@echo off
+setlocal
+call "C:\Oracle\Middleware\user_projects\epmsystem1\bin\setEnv.bat"
+
+if "%1" == "" (
+   SET INIT_PARAM=all
+    goto start
+)
+SET INIT_PARAM=%1
+
+:start
+
+DATE /T
+TIME /T
+
+echo Stopping  %INIT_PARAM%
+call C:\Oracle\Middleware\EPMSystem11R1\common\config\11.1.2.0\resources\instance\stopper.bat %INIT_PARAM%
+echo Finish %INIT_PARAM%
+
+DATE /T
+TIME /T
+
+endlocal
+</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="os_302"></a>os_302</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>OS</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Start All EPM Apps</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary 
+    This command ...
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o 
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+echo off
+setlocal
+call "C:\Oracle\Middleware\user_projects\epmsystem1\bin\setEnv.bat"
+
+if "%1" == "" (
+   SET INIT_PARAM=all
+   goto start
+)
+SET INIT_PARAM=%1
+
+:start
+
+DATE /T
+TIME /T
+
+echo Starting %INIT_PARAM%
+call C:\Oracle\Middleware\EPMSystem11R1\common\config\11.1.2.0\resources\instance\starter.bat %INIT_PARAM%
+echo Finish %INIT_PARAM%
+
+DATE /T
+TIME /T
+
+endlocal
+</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="os_304"></a>os_304</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>OS</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Start WebLogic</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary 
+    This command ...
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o 
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+#!/bin/sh
+
+# WARNING: This file is created by the Configuration Wizard.
+# Any changes to this script may be lost when adding extensions to this configuration.
+
+# --- Start Functions ---
+
+stopAll()
+{
+	# We separate the stop commands into a function so we are able to use the trap command in Unix (calling a function) to stop these services
+	if [ "X${ALREADY_STOPPED}" != "X" ] ; then
+		exit
+	fi
+	# STOP DERBY (only if we started it)
+	if [ "${DERBY_FLAG}" = "true" ] ; then
+		echo "Stopping Derby server..."
+		${WL_HOME}/common/derby/bin/stopNetworkServer.sh  &gt;"${DOMAIN_HOME}/derbyShutdown.log" 2&gt;&amp;1 
+
+		echo "Derby server stopped."
+	fi
+
+	ALREADY_STOPPED="true"
+}
+
+classCaching()
+{
+	echo "Class caching enabled..."
+	JAVA_OPTIONS="${JAVA_OPTIONS} -Dlaunch.main.class=${SERVER_CLASS} -Dlaunch.class.path="${CLASSPATH}" -Dlaunch.complete=weblogic.store.internal.LockManagerImpl -cp ${WL_HOME}/server/lib/pcl2.jar"
+	export JAVA_OPTIONS
+	SERVER_CLASS="com.oracle.classloader.launch.Launcher"
+}
+
+# --- End Functions ---
+
+# *************************************************************************
+# This script is used to start WebLogic Server for this domain.
+# 
+# To create your own start script for your domain, you can initialize the
+# environment by calling @USERDOMAINHOME/setDomainEnv.
+# 
+# setDomainEnv initializes or calls commEnv to initialize the following variables:
+# 
+# BEA_HOME       - The BEA home directory of your WebLogic installation.
+# JAVA_HOME      - Location of the version of Java used to start WebLogic
+#                  Server.
+# JAVA_VENDOR    - Vendor of the JVM (i.e. BEA, HP, IBM, Sun, etc.)
+# PATH           - JDK and WebLogic directories are added to system path.
+# WEBLOGIC_CLASSPATH
+#                - Classpath needed to start WebLogic Server.
+# PATCH_CLASSPATH - Classpath used for patches
+# PATCH_LIBPATH  - Library path used for patches
+# PATCH_PATH     - Path used for patches
+# WEBLOGIC_EXTENSION_DIRS - Extension dirs for WebLogic classpath patch
+# JAVA_VM        - The java arg specifying the VM to run.  (i.e.
+#                - server, -hotspot, etc.)
+# USER_MEM_ARGS  - The variable to override the standard memory arguments
+#                  passed to java.
+# PRODUCTION_MODE - The variable that determines whether Weblogic Server is started in production mode.
+# DERBY_HOME - Derby home directory.
+# DERBY_CLASSPATH
+#                - Classpath needed to start Derby.
+# 
+# Other variables used in this script include:
+# SERVER_NAME    - Name of the weblogic server.
+# JAVA_OPTIONS   - Java command-line options for running the server. (These
+#                  will be tagged on to the end of the JAVA_VM and
+#                  MEM_ARGS)
+# CLASS_CACHE    - Enable class caching of system classpath.
+# 
+# For additional information, refer to "Managing Server Startup and Shutdown for Oracle WebLogic Server"
+#  (http://download.oracle.com/docs/cd/E17904_01/web.1111/e13708/overview.htm).
+# *************************************************************************
+
+umask 037
+
+
+# Call setDomainEnv here.
+DOMAIN_HOME="C:/Oracle/Middleware/user_projects/domains/EPMSystem"
+. ${DOMAIN_HOME}/bin/setDomainEnv.sh $*
+SAVE_JAVA_OPTIONS="${JAVA_OPTIONS}"
+SAVE_CLASSPATH="${CLASSPATH}"
+
+# Start Derby
+
+DERBY_DEBUG_LEVEL="0"
+
+if [ "${DERBY_FLAG}" = "true" ] ; then
+	${WL_HOME}/common/derby/bin/startNetworkServer.sh  &gt;"${DOMAIN_HOME}/derby.log" 2&gt;&amp;1 
+
+fi
+
+JAVA_OPTIONS="${SAVE_JAVA_OPTIONS}"
+SAVE_JAVA_OPTIONS=""
+CLASSPATH="${SAVE_CLASSPATH}"
+SAVE_CLASSPATH=""
+
+trap 'stopAll' 1 2 3 15
+
+
+if [ "${PRODUCTION_MODE}" = "true" ] ; then
+	WLS_DISPLAY_MODE="Production"
+else
+	WLS_DISPLAY_MODE="Development"
+fi
+
+if [ "${WLS_USER}" != "" ] ; then
+	JAVA_OPTIONS="${JAVA_OPTIONS} -Dweblogic.management.username=${WLS_USER}"
+fi
+
+if [ "${WLS_PW}" != "" ] ; then
+	JAVA_OPTIONS="${JAVA_OPTIONS} -Dweblogic.management.password=${WLS_PW}"
+fi
+
+if [ "${MEDREC_WEBLOGIC_CLASSPATH}" != "" ] ; then
+	if [ "${CLASSPATH}" != "" ] ; then
+		CLASSPATH="${CLASSPATH}${CLASSPATHSEP}${MEDREC_WEBLOGIC_CLASSPATH}"
+	else
+		CLASSPATH="${MEDREC_WEBLOGIC_CLASSPATH}"
+	fi
+fi
+
+echo "."
+echo "."
+echo "JAVA Memory arguments: ${MEM_ARGS}"
+echo "."
+echo "WLS Start Mode=${WLS_DISPLAY_MODE}"
+echo "."
+echo "CLASSPATH=${CLASSPATH}"
+echo "."
+echo "PATH=${PATH}"
+echo "."
+echo "***************************************************"
+echo "*  To start WebLogic Server, use a username and   *"
+echo "*  password assigned to an admin-level user.  For *"
+echo "*  server administration, use the WebLogic Server *"
+echo "*  console at http://hostname:port/console        *"
+echo "***************************************************"
+
+# CLASS CACHING
+
+if [ "${CLASS_CACHE}" = "true" ] ; then
+	classCaching
+fi
+
+# START WEBLOGIC
+
+echo "starting weblogic with Java version:"
+
+${JAVA_HOME}/bin/java ${JAVA_VM} -version
+
+if [ "${WLS_REDIRECT_LOG}" = "" ] ; then
+	echo "Starting WLS with line:"
+	echo "${JAVA_HOME}/bin/java ${JAVA_VM} ${MEM_ARGS} -Dweblogic.Name=${SERVER_NAME} -Djava.security.policy=${WL_HOME}/server/lib/weblogic.policy ${JAVA_OPTIONS} ${PROXY_SETTINGS} ${SERVER_CLASS}"
+	${JAVA_HOME}/bin/java ${JAVA_VM} ${MEM_ARGS} -Dweblogic.Name=${SERVER_NAME} -Djava.security.policy=${WL_HOME}/server/lib/weblogic.policy ${JAVA_OPTIONS} ${PROXY_SETTINGS} ${SERVER_CLASS}
+else
+	echo "Redirecting output from WLS window to ${WLS_REDIRECT_LOG}"
+	${JAVA_HOME}/bin/java ${JAVA_VM} ${MEM_ARGS} -Dweblogic.Name=${SERVER_NAME} -Djava.security.policy=${WL_HOME}/server/lib/weblogic.policy ${JAVA_OPTIONS} ${PROXY_SETTINGS} ${SERVER_CLASS}  &gt;"${WLS_REDIRECT_LOG}" 2&gt;&amp;1 
+fi
+
+stopAll
+
+popd
+
+# Exit this script only if we have been told to exit.
+
+if [ "${doExitFlag}" = "true" ] ; then
+	exit
+fi
+</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+      </div>
+   </body>
+</html>

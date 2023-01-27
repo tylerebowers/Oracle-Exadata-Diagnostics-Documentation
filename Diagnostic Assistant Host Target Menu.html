@@ -1,0 +1,3108 @@
+<html>
+   <head>
+      <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+      <title></title>
+      <style id="MenuScriptStyle">
+    spanhelp { background:#def3ca; padding:3px; float:left; }
+    .arrow-up {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+
+      border-bottom: 10px solid black;
+    }
+
+    .arrow-down {
+      width: 0;
+      height: 0;
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+
+      border-top: 10px solid black;
+      }
+      
+    /* This CSS is used for the Show/Hide functionality. */
+   .more {
+      display: none;
+      border-top: 1px solid #666;
+      border-bottom: 1px solid #666; }
+   .more2 {display: none; }
+   a.showLink, a.hideLink {
+      text-decoration: none;
+      color: #36f;
+      padding-left: 8px;
+      background: transparent url(down.gif) no-repeat left; }
+   a.hideLink {
+      background: transparent url(up.gif) no-repeat left; }
+   a.showLink:hover, a.hideLink:hover {
+      border-bottom: 1px dotted #36f; }   
+  </style>
+      <style type="text/css" id="internalStyle">
+      
+/*
+  Copyright 2002, 2011, Oracle and/or its affiliates. All rights reserved.
+  file: blafdoc.css     Version: 2011.10.7
+*/
+
+body {
+  font-family: Tahoma, sans-serif;
+  color: black;
+  background-color: white;
+  font-size: small;
+}
+* html body {
+  /* http://www.info.com.ph/~etan/w3pantheon/style/modifiedsbmh.html */
+  font-size: x-small; /* for IE5.x/win */
+  f\ont-size: small;  /* for other IE versions */
+}
+
+h1 {
+  font-size: 165%;
+  font-weight: bold;
+  border-bottom: 1px solid #ddd;
+  width: 100%;
+}
+
+h2 {
+  color:#336699;
+  font-size: 152%;
+  font-weight: bold;
+}
+
+h3 {
+  color:#336699;
+  font-size: 139%;
+  font-weight: bold;
+}
+
+h4 {
+  color:#336699;
+  font-size: 126%;
+  font-weight: bold;
+}
+
+h5 {
+  color:#336699;
+  font-size: 113%;
+  font-weight: bold;
+  display: inline;
+}
+
+h6 {
+  color:black;
+  font-size: 100%;
+  font-weight: bold;
+  font-style: italic;
+  display: inline;
+}
+
+a:link {
+  color: #039;
+  background: inherit;
+}
+
+a:visited {
+  color: #72007C;
+  background: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a img, img[usemap] {
+  border-style: none;
+}
+
+code, samp, tt {
+  font-family: monospace;
+  font-size: 110%;
+}
+
+caption {
+  text-align: center;
+  font-weight: bold;
+  width: auto;
+}
+
+dt {
+  font-weight: bold;
+}
+
+table {
+    color: #000000;
+    font-weight: bold;
+    border-spacing: 0;
+    outline: medium none;
+font-family: Lucida Grande,Lucida Sans,Arial,sans-serif;
+font-size: 12px;
+
+}
+
+th_test {
+    background:  blue;
+    border: 1px solid #AED0EA;
+    font-size: 23px;
+    font-weight: bold;
+    color: red; 
+}
+td {
+    background: #F2F5F7;
+    border: 1px solid #AED0EA;
+    font-weight: normal;
+    padding: 5;
+}
+
+.td_output {
+   color: #000000;
+   background: #E0E0E0;
+   border: 1px solid #AED0EA;
+   font-family: Lucida Grande,Lucida Sans,Arial,sans-serif;
+   font-size: 13px;
+   font-weight: normal;
+   padding: 1;
+}
+
+.td_column2 {
+    background: #F2F5F7;
+    border: 1px solid #AED0EA;
+    font-size: 13px;
+    font-weight: bold;
+    text-align: center;
+    color:#336699;
+}
+
+.td_column {
+    background: #D7EBF9;
+    border: 1px solid #AED0EA;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+.td_title {
+
+ background: #F2F5F7;
+    border: 0px solid #AED0EA;
+    font-weight: normal;
+    padding: 5;
+}
+
+pre {
+ overflow-x: auto; /* Use horizontal scroller if needed; for Firefox 2, not needed in Firefox 3 */
+ white-space: pre-wrap; /* css-3 */
+ white-space: -moz-pre-wrap !important; /* Mozilla, since 1999 */
+ white-space: -pre-wrap; /* Opera 4-6 */
+ white-space: -o-pre-wrap; /* Opera 7 */
+ /* width: 99%; */
+ word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+
+ol ol {
+  list-style-type: lower-alpha;
+}
+
+ol ol ol {
+  list-style-type: lower-roman;
+}
+
+td p:first-child, td pre:first-child {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+table.table-border {
+  border-collapse: collapse;
+  border-top: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+}
+table.table-border th {
+  padding: 0.5ex 0.25em;
+  color: black;
+  background-color: #f7f7ea;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+table.table-border tr {
+  padding: 0.5ex 0.25em;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+table.table-border td {
+  padding: 0.5ex 0.25em;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+span.gui-object, span.gui-object-action {
+  font-weight: bold;
+}
+
+span.gui-object-title { }
+
+p.horizontal-rule {
+  width: 100%;
+  border: solid #cc9;
+  border-width: 0px 0px 1px 0px;
+  margin-bottom: 4ex;
+}
+
+div.zz-skip-header {
+  display: none;
+}
+
+td.zz-nav-header-cell {
+  text-align: left;
+  font-size: 95%;
+  width: 99%;
+  color: black;
+  background: inherit;
+  font-weight: normal;
+  vertical-align: top;
+  margin-top: 0ex;
+  padding-top: 0ex;
+}
+
+a.zz-nav-header-link {
+  font-size: 95%;
+}
+
+td.zz-nav-button-cell {
+  white-space: nowrap;
+  text-align: center;
+  width: 1%;
+  vertical-align: top;
+  padding-left: 4px;
+  padding-right: 4px;
+  margin-top: 0ex;
+  padding-top: 0ex;
+}
+
+a.zz-nav-button-link {
+  font-size: 90%;
+}
+
+div.zz-nav-footer-menu {
+  width: 100%;
+  text-align: center;
+  margin-top: 2ex;
+  margin-bottom: 4ex;
+}
+
+p.c9 {
+   line-height: 13.872pt;
+   margin-top: 0.0pt;
+   margin-bottom: 5.0pt;
+   margin-left: 6.0pt;
+   margin-right: 6.0pt;
+   }
+p.zz-legal-notice, a.zz-legal-notice-link {
+  font-size: 85%;
+  /* display: none; */ /* Uncomment to hide legal notice */
+}
+
+
+    </style><script type="text/javascript">
+  // Validate using: http://www.quirksmode.org/dom/w3c_html.html 
+  function showHide(divId) {
+     if (document.getElementById(divId)) {
+        if (document.getElementById(divId+'-show').style.display != 'none') {
+           document.getElementById(divId+'-show').style.display = 'none';
+           document.getElementById(divId).style.display = 'block';
+        }
+        else {
+           document.getElementById(divId+'-show').style.display = 'inline';
+           document.getElementById(divId).style.display = 'none';
+        }
+     }
+  }
+  
+  function toggleHelp(id) {
+     var de = document.getElementById(id);
+     if(de.style.display == 'block')
+        de.style.display = 'none';
+     else
+        de.style.display = 'block';
+  }
+ </script>
+   </head>
+   <body><a name="TOP"></a><img border="0" src="http://www.oracleimg.com/us/assets/oralogo-small.gif" alt="Oracle Corp. and/or its affiliates.">
+      <div align="center">
+         <h3>Oracle Diagnostic Assistant Host Target Menu - Documentation </h3>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="main"></a>main - Oracle Diagnostic Assistant Host Target Menu</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>         
+  The Diagnostic Assistant Host target menu enables targeted  
+  troubleshooting and gathering of relevant diagnostics.
+    
+  Select one of the following options:
+    (1) Configure
+    (2) Install
+    (3) Performance
+      
+    (H)elp   (E)xit  
+   
+   </pre>
+                  <p class="c9"><a href="#" id="help1-show" class="showLink" onclick="toggleHelp('help1');"><b>[+]</b> Toggle Help</a>
+                     <div id="help1" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Oracle Diagnostic Assistant Host Target Main Menu
+ 
+  The Diagnostic Assistant Host target menu enables targeted  
+  troubleshooting and gathering of relevant diagnostics.
+  
+  Explanation of available options:
+  
+    (1) Configure
+        o Executes Oracle Configuration Manager OCM to collect Host data
+        o Executes RDA to collect operating system data
+        o Executes RDA tool TLsecure to identify potential security risks
+         
+    (2) Install
+        o Executes Health Check / Validation Engine HCVE
+        o Executes Remote Diagnostic Agent (RDA) to collect operating system  
+          and Oracle installation data
+              
+    (3) Performance
+        o Executes RDA profiles and modules to collect performance data
+        o Executes RDA tools TLsos, TLjroc, and TLepm to collect 
+          siga/sosreport/sysreport, JRockit process, and Enterprise 
+          Performance Management Validation information   
+             
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap1-show" class="showLink" onclick="showHide('menumap1');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap1" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:menu:Config</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Config</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Config">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap1-hide" class="hideLink" onclick="showHide('menumap1');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap2-show" class="showLink" onclick="showHide('menumap2');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap2" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:menu:Preinstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Preinstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Preinstall">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap2-hide" class="hideLink" onclick="showHide('menumap2');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap3-show" class="showLink" onclick="showHide('menumap3');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap3" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:menu:Performance</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Performance</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Performance">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap3-hide" class="hideLink" onclick="showHide('menumap3');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="Preinstall"></a>Preinstall - Host: Install</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre> 
+  The Install menu will provide diagnostic information 
+  to assess your environment.
+    
+  Select one of the following options:
+    (1) Health Check Assessments
+    (2) Operating System and Network Information
+          
+    (M)ain    (B)ack    (H)elp   (E)xit
+   </pre>
+                  <p class="c9"><a href="#" id="help2-show" class="showLink" onclick="toggleHelp('help2');"><b>[+]</b> Toggle Help</a>
+                     <div id="help2" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Oracle Diagnostic Assistant Host Target: Install Menu Help
+    
+  Explanation of available options:
+    
+    (1) Health Check Assessments 
+        o This option shows a menu of available pre-installation healthcheck 
+          assessments using the Healthcheck Validation Engine (HCVE)
+        o Healtchcheck Assessments are performed by the Healthcheck Validation 
+          Engine (HCVE) and the HCVE rule engine is a tool that runs 
+          inside Remote Diagnostic Agent Framework
+        o The purpose of HCVE is to provide a generic engine to execute 
+          assessment checks for customers and on the Oracle server side 
+          environment using very abstract rules provided by the product experts 
+ 
+    (2) Operating System and Network Information
+        o RDA will execute the following module:
+          o OS (collects operating system information)
+          o NET (collects network information)
+            
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap4-show" class="showLink" onclick="showHide('menumap4');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap4" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:menu:PreinstallHCVE</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>PreinstallHCVE</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#PreinstallHCVE">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap4-hide" class="hideLink" onclick="showHide('menumap4');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap5-show" class="showLink" onclick="showHide('menumap5');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap5" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_319</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_319</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_319">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap5-hide" class="hideLink" onclick="showHide('menumap5');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap6-show" class="showLink" onclick="showHide('menumap6');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap6" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap6-hide" class="hideLink" onclick="showHide('menumap6');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap7-show" class="showLink" onclick="showHide('menumap7');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap7" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap7-hide" class="hideLink" onclick="showHide('menumap7');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="PreinstallHCVE"></a>PreinstallHCVE - Pre-Install: Health Check Assessments</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  Your HCVE Assessment is about to be created.
+   
+  Select one of the following options:
+    (1) Oracle Database 10x, 11, RAC
+    (2) Oracle Application Server 10g
+    (3) Oracle Fusion Middleware 11gR1 [11.1.1]
+    (4) Oracle Portal
+    (5) Oracle Identity Management 10g [10.1.4]
+    (6) Oracle E-Business Suite Release 11i [11.5.10]
+    (7) Oracle E-Business Suite Release 12 [12.1.1]
+      
+          
+    (M)ain    (B)ack    (H)elp   (E)xit
+   </pre>
+                  <p class="c9"><a href="#" id="help3-show" class="showLink" onclick="toggleHelp('help3');"><b>[+]</b> Toggle Help</a>
+                     <div id="help3" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Preinstallation: Health Check Assessments Menu Help
+
+  DA will determine your platform before executing the selected rule set.
+          
+  Explanation of available options:
+    
+    (1) Oracle Database 10g, 11g, RAC
+        o This option will take you to a menu where you can select specific
+          database environment to assess
+    
+    (2) Oracle Application Server 10g
+        o This option will take you to a menu where you can select specific
+          database environment to assess
+        o Select this option if you have a 10g Oracle Application 
+          Server environment    
+        o Available for  9.0.x, 10.1.2 and 10.1.3
+          
+    (3) Oracle Fusion Middleware 11gR1 [11.1.1]
+        o Select this option if you have an 11g Fusion Middleware environment
+        o Rule set executed is A300FM1111_&lt;platform&gt;
+        o A pre-install check for Oracle Fusion Middleware 11g R1 [11.1.1]
+          will be performed if you have one of the following environments:
+           - AIX 
+           - HP-UX 
+           - Linux 
+           - Sun Solaris 
+           - Windows 
+          
+    (4) Oracle Portal
+        o Select this option if you have an Oracle Portal environment
+        o Rule set executed is A305PDA_GEN
+        o This ruleset is generic and will run on any platform
+          
+    (5) Oracle Identity Management 10g [10.1.4]
+        o Select this option if you have a 10g Identity Management environment
+        o Rule set executed is A360IM1014_&lt;platform&gt;
+        o A pre-install check for Oracle Identity Management 10g (10.1.4) will
+          be performed if you have one of the following environments:
+           - AIX 
+           - HP-UX 
+           - Linux 
+           - Sun Solaris 
+          
+    (6) Oracle E-Business Suite Release 11i [11.5.10]
+        o Select this option if you have an Oracle E-Business Suite 
+          Release 11 environment
+        o Rule set executed is A500EB11510_&lt;platform&gt;
+        o A pre-install check for Oracle E-Business Suite Release 11i 
+          [11.5.10] will be performed if you have one of the following 
+          environments:
+           - AIX 
+           - HP-UX 
+           - Linux 
+           - Sun Solaris 
+          
+    (7) Oracle E-Business Suite Release 12 [12.1.1]
+        o Select this option if you have an Oracle E-Business Suite 
+          Release 12 environment
+        o Rule set executed is A500EB1211_&lt;platform&gt;
+        o A pre-install check for Oracle E-Business Suite Release 12 
+          [12.1.1] will be performed if you have one of the following 
+          environments:
+           - AIX 
+           - HP-UX 
+           - Linux 
+           - Sun Solaris 
+
+    Please review Knowledge Article 250262.1: RDA 4 -Health Check /  
+    Validation Engine Guide (https://support.oracle.com/CSP/main
+    article?cmd=show&amp;type=NOT&amp;id=250262.1)
+    for detailed information on Health Check usage.
+    
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap8-show" class="showLink" onclick="showHide('menumap8');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap8" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:menu:HCVEDB</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>HCVEDB</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#HCVEDB">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap8-hide" class="hideLink" onclick="showHide('menumap8');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap9-show" class="showLink" onclick="showHide('menumap9');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap9" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:menu:HCVEOAS10g</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>HCVEOAS10g</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#HCVEOAS10g">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap9-hide" class="hideLink" onclick="showHide('menumap9');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap10-show" class="showLink" onclick="showHide('menumap10');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap10" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:rda_365</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_365</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_365">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap10-hide" class="hideLink" onclick="showHide('menumap10');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 4&nbsp;  - &nbsp;<a href="#" id="menumap11-show" class="showLink" onclick="showHide('menumap11');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap11" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>4:command:rda_372</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_372</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_372">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap11-hide" class="hideLink" onclick="showHide('menumap11');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 5&nbsp;  - &nbsp;<a href="#" id="menumap12-show" class="showLink" onclick="showHide('menumap12');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap12" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>5:command:rda_375</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>5</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_375</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_375">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap12-hide" class="hideLink" onclick="showHide('menumap12');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 6&nbsp;  - &nbsp;<a href="#" id="menumap13-show" class="showLink" onclick="showHide('menumap13');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap13" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>6:command:rda_380</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>6</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_380</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_380">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap13-hide" class="hideLink" onclick="showHide('menumap13');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 7&nbsp;  - &nbsp;<a href="#" id="menumap14-show" class="showLink" onclick="showHide('menumap14');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap14" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>7:command:rda_382</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>7</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_382</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_382">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap14-hide" class="hideLink" onclick="showHide('menumap14');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap15-show" class="showLink" onclick="showHide('menumap15');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap15" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap15-hide" class="hideLink" onclick="showHide('menumap15');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap16-show" class="showLink" onclick="showHide('menumap16');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap16" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:Preinstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Preinstall</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Preinstall">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap16-hide" class="hideLink" onclick="showHide('menumap16');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="HCVEDB"></a>HCVEDB - Pre-Install: Oracle Database HCVE</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Use the HCVE to assess your database environment.
+   
+  Select one of the following options:
+    (1) Oracle Database 10g [10.1.x]
+    (2) Oracle Database 10g [10.2.x]
+    (3) Oracle Database 11g [11.1.x]
+    (4) Oracle Database 11g [11.2.x]
+    (5) Oracle RAC 10g Database
+          
+    (M)ain    (B)ack    (H)elp   (E)xit
+   </pre>
+                  <p class="c9"><a href="#" id="help4-show" class="showLink" onclick="toggleHelp('help4');"><b>[+]</b> Toggle Help</a>
+                     <div id="help4" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Health Check Assessments: Oracle Database HCVE Help
+
+  Your database environment along with your platform dictate which ruleset 
+  is executed.  You will need to indicate your database, but DA will determine 
+  your platform before executing the selected rule set.
+  
+  Explanation of available options:
+  
+    (1) Oracle Database 10g [10.1.x]
+        o Select this option if you have a 10.1.x database environment
+        o Rule set executed is A200DB10R1_&lt;platform&gt;
+        o A check for Oracle Database 10g [10.1.x] will be performed if you 
+          have one of the following environments:
+           - AIX 
+           - HP-UX 
+           - Linux
+           - Mac
+           - Sun Solaris 
+           - Windows 
+  
+    (2) Oracle Database 10g [10.2.x]
+        o Select this option if you have a 10.2.x database environment
+        o Rule set executed is A200DB10R2_&lt;platform&gt;
+        o A check for Oracle Database 10g [10.2.x] will be performed if you 
+          have one of the following environments:
+           - AIX 
+           - HP-UX 
+           - Linux
+           - Sun Solaris 
+           
+    (3) Oracle Database 11g [11.1.x]
+        o Select this option if you have an 11.1.x database environment
+        o Rule set executed is A200DB11R1_&lt;platform&gt;
+        o A check for Oracle Database 11g [11.1.x] will be performed if you 
+          have one of the following environments:
+           - AIX 
+           - HP-UX 
+           - Linux
+           - Sun Solaris 
+           
+    (4) Oracle Database 11g [11.2.x]
+        o Select this option if you have an 11.2.x database environment
+        o Rule set executed is A200DB11R2_&lt;platform&gt;
+        o The ruleset will execute for Oracle Database 11g [11.2.x] only if you 
+          have one of the following environments:
+           - AIX 
+           - HP-UX 
+           - Linux
+           - Sun Solaris 
+           - Windows 
+           
+    (5) Oracle RAC 10g Database
+        o Select this option if you have a 10g RAC database environment
+        o Rule set executed is P400RAC_LNX
+        o This command only executes on linux 
+        o OS Best Practices is also included
+        
+    Note: Please review Knowledge Article 250262.1:
+          RDA 4 -Health Check/Validation Engine Guide (https://
+          support.oracle.com/CSP/main/article?cmd=show&amp;type=NOT&amp;id=250262.1) 
+          for detailed information on Health Check usage.
+    
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap17-show" class="showLink" onclick="showHide('menumap17');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap17" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_340</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_340</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_340">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap17-hide" class="hideLink" onclick="showHide('menumap17');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap18-show" class="showLink" onclick="showHide('menumap18');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap18" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_341</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_341</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_341">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap18-hide" class="hideLink" onclick="showHide('menumap18');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap19-show" class="showLink" onclick="showHide('menumap19');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap19" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:rda_350</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_350</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_350">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap19-hide" class="hideLink" onclick="showHide('menumap19');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 4&nbsp;  - &nbsp;<a href="#" id="menumap20-show" class="showLink" onclick="showHide('menumap20');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap20" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>4:command:rda_351</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>4</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_351</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_351">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap20-hide" class="hideLink" onclick="showHide('menumap20');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 5&nbsp;  - &nbsp;<a href="#" id="menumap21-show" class="showLink" onclick="showHide('menumap21');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap21" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>5:command:rda_309</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>5</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_309</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_309">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap21-hide" class="hideLink" onclick="showHide('menumap21');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap22-show" class="showLink" onclick="showHide('menumap22');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap22" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap22-hide" class="hideLink" onclick="showHide('menumap22');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap23-show" class="showLink" onclick="showHide('menumap23');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap23" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:PreinstallHCVE</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>PreinstallHCVE</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#PreinstallHCVE">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap23-hide" class="hideLink" onclick="showHide('menumap23');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="HCVEOAS10g"></a>HCVEOAS10g - Pre-Install: OAS 10g HCVE</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Your HCVE Assessment is about to be created for Oracle Application 
+  Server 10g.  Selection is based on OAS 10g version.
+   
+  Select one of the following options:
+    (1) Oracle Application Server 10g [9.0.x]
+    (2) Oracle Application Server 10g R2 [10.1.2]
+    (3) Oracle Application Server 10g R3 [10.1.3]
+         
+    (M)ain    (B)ack    (H)elp   (E)xit
+   </pre>
+                  <p class="c9"><a href="#" id="help5-show" class="showLink" onclick="toggleHelp('help5');"><b>[+]</b> Toggle Help</a>
+                     <div id="help5" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Health Check Assessments: Oracle Application Server 10g HCVE Help
+    
+  Explanation of available options:
+   
+    (1) Oracle Application Server 10g [9.0.x]
+        O Select this option to assess the health of a OAS 10g [9.0.x] 
+          environment
+        o Rule set executed is A300AS0904_&lt;platform&gt;
+        o A check for Oracle Application Server 10g [9.0.x] will be performed 
+          ONLY if you have one of the following environments:
+           - AIX 
+           - HP-UX 
+           - Linux
+           - Sun Solaris 
+           
+    (2) Oracle Application Server 10g R2 [10.1.2]
+        O Select this option to assess the health of a OAS 10g R2 [10.1.2] 
+          environment
+        o Rule set executed is A300AS1012_&lt;platform&gt;
+        o A check for Oracle Application Server 10g R2 [10.1.2] will be   
+          performed ONLY if you have one of the following environments:
+           - HP-UX 
+           - Linux
+           - Sun Solaris 
+           
+    (3) Oracle Application Server 10g R3 [10.1.3]
+        O Select this option to assess the health of a OAS 10g R3 [10.1.3] 
+          environment  
+        o Rule set executed is A300AS1013_LIN  
+        o A check for Oracle Application Server 10g R3 [10.1.3] will be  
+          performed ONLY if you have a Linux environment
+           
+    Note: Please review Knowledge Article 250262.1: RDA 4 -Health Check /  
+          Validation Engine Guide (https://support.oracle.com/CSP/main/
+          article?cmd=show&amp;type=NOT&amp;id=250262.1) for detailed information 
+          on Health Check usage.
+      
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap24-show" class="showLink" onclick="showHide('menumap24');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap24" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_360</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_360</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_360">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap24-hide" class="hideLink" onclick="showHide('menumap24');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap25-show" class="showLink" onclick="showHide('menumap25');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap25" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_361</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_361</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_361">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap25-hide" class="hideLink" onclick="showHide('menumap25');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap26-show" class="showLink" onclick="showHide('menumap26');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap26" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:rda_359</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_359</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_359">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap26-hide" class="hideLink" onclick="showHide('menumap26');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap27-show" class="showLink" onclick="showHide('menumap27');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap27" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap27-hide" class="hideLink" onclick="showHide('menumap27');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap28-show" class="showLink" onclick="showHide('menumap28');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap28" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:PreinstallHCVE</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>PreinstallHCVE</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#PreinstallHCVE">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap28-hide" class="hideLink" onclick="showHide('menumap28');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="Config"></a>Config - Host: Configure</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  
+  Select one of the following options:
+    (1) OCM Host data - TBD
+    (2) Operating System information
+    (3) Identify potential security risks
+          
+    (M)ain    (B)ack    (H)elp   (E)xit
+   </pre>
+                  <p class="c9"><a href="#" id="help6-show" class="showLink" onclick="toggleHelp('help6');"><b>[+]</b> Toggle Help</a>
+                     <div id="help6" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Oracle Diagnostic Assistant Host Target: Configure Help
+   
+  Explanation of available options:
+  
+    (1) OCM Host data - TBD
+        o This option will collect OCM Host data 
+  
+    (2) Operating System Information
+        o This option execute the OS module within RDA
+
+    (3) Identify potential security risks
+        o This option will run RDA:TLsecure for all security risks including:
+          - Users with a default password (11g)
+          - Users with a well known password
+          - Users not visible in dba_users
+          - Operating system authenticated user names with a password
+          - Users with SYSTEM as default tablespace
+          - Users and privileges from gv$pwfile_users
+          - Privileges not granted by their owner
+          - Listeners without a password
+          - Listeners with local operating system authentication 
+            (10g and later)
+          - Listeners modifiable at runtime
+          - AUTHENTICATION_SERVICES value in sqlnet.ora files
+          - Oracle executables owned by different users of a same group 
+            (UNIX only)
+
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap29-show" class="showLink" onclick="showHide('menumap29');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap29" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:menu:OcmHostData</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>OcmHostData</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#OcmHostData">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap29-hide" class="hideLink" onclick="showHide('menumap29');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap30-show" class="showLink" onclick="showHide('menumap30');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap30" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_311</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_311</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_311">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap30-hide" class="hideLink" onclick="showHide('menumap30');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap31-show" class="showLink" onclick="showHide('menumap31');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap31" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:command:rda_309</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_309</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_309">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap31-hide" class="hideLink" onclick="showHide('menumap31');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap32-show" class="showLink" onclick="showHide('menumap32');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap32" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap32-hide" class="hideLink" onclick="showHide('menumap32');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap33-show" class="showLink" onclick="showHide('menumap33');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap33" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap33-hide" class="hideLink" onclick="showHide('menumap33');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="OcmHostData"></a>OcmHostData - TBD Configuration: OCM Host Data</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  TBD - Command not yet developed
+          
+  Select one of the following options:
+  
+    (M)ain    (B)ack    (H)elp   (E)xit  
+      
+   </pre>
+                  <p class="c9"><a href="#" id="help7-show" class="showLink" onclick="toggleHelp('help7');"><b>[+]</b> Toggle Help</a>
+                     <div id="help7" class="more"><b>Showing Menu Help:</b>
+                        <pre>  TBD - command not yet developed
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap34-show" class="showLink" onclick="showHide('menumap34');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap34" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap34-hide" class="hideLink" onclick="showHide('menumap34');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap35-show" class="showLink" onclick="showHide('menumap35');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap35" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:Config</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Config</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Config">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap35-hide" class="hideLink" onclick="showHide('menumap35');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="Network"></a>Network - Host: Networking</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+
+  Select one of the following options:
+    (1) Network Information
+    (2) Network Advisor Tool - TBD
+          
+    (M)ain    (B)ack    (H)elp   (E)xit
+    
+   </pre>
+                  <p class="c9"><a href="#" id="help8-show" class="showLink" onclick="toggleHelp('help8');"><b>[+]</b> Toggle Help</a>
+                     <div id="help8" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Oracle Diagnostic Assistant Host Target: Networking Help
+   
+  Explanation of available options:
+    
+    (1) Network Information
+        o This option executes the NET module within RDA
+  
+    (2) Network Advisor Tool - TBD
+        o Net Advisor is a tool that provides advice on resolving network layer 
+          errors encountered using Oracle Net Services. 
+          Inputs:
+            - the absolute path of a valid Oracle Networking trace file
+        o The tool will analyze the trace file. It notes which naming methods 
+          were used in attempting to resolve a given service name and 
+          provides an overview of the network configuration. 
+          Net Advisor identifies conflicts or issues in the network setup of 
+          the client, and suggests what to check or which actions to take 
+          for the issues found. Operating System data will be collected.
+
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap36-show" class="showLink" onclick="showHide('menumap36');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap36" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_310</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_310</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_310">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap36-hide" class="hideLink" onclick="showHide('menumap36');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap37-show" class="showLink" onclick="showHide('menumap37');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap37" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:menu:NetAdvisorTool</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>NetAdvisorTool</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#NetAdvisorTool">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap37-hide" class="hideLink" onclick="showHide('menumap37');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap38-show" class="showLink" onclick="showHide('menumap38');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap38" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap38-hide" class="hideLink" onclick="showHide('menumap38');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap39-show" class="showLink" onclick="showHide('menumap39');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap39" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap39-hide" class="hideLink" onclick="showHide('menumap39');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="NetAdvisorTool"></a>NetAdvisorTool - TBD: Network: Advisor Tool</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  TBD - Command not yet developed
+          
+  Select one of the following options:
+  
+    (M)ain    (B)ack    (H)elp   (E)xit  
+      
+   </pre>
+                  <p class="c9"><a href="#" id="help9-show" class="showLink" onclick="toggleHelp('help9');"><b>[+]</b> Toggle Help</a>
+                     <div id="help9" class="more"><b>Showing Menu Help:</b>
+                        <pre>  TBD - command not yet developed
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap40-show" class="showLink" onclick="showHide('menumap40');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap40" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap40-hide" class="hideLink" onclick="showHide('menumap40');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap41-show" class="showLink" onclick="showHide('menumap41');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap41" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:Network</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Network</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Network">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap41-hide" class="hideLink" onclick="showHide('menumap41');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="Performance"></a>Performance - Host: Performance</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+
+  Select one of the following options:
+    (1) Performance Information
+    (2) Network Performance Information
+    (3) Performance Tools - TBD
+          
+    (M)ain    (B)ack    (H)elp   (E)xit
+   </pre>
+                  <p class="c9"><a href="#" id="help10-show" class="showLink" onclick="toggleHelp('help10');"><b>[+]</b> Toggle Help</a>
+                     <div id="help10" class="more"><b>Showing Menu Help:</b>
+                        <pre>  Oracle Diagnostic Assistant Host Target: Performance Help
+   
+  Explanation of available options:
+    
+    (1) Performance Information
+        o This option executes the PERF RDA module
+  
+    (2) Network Performance Information
+        o This option executes the NET RDA module
+        
+    (3) Performance Tools - TBD
+        o This option will enable the following RDA tools to be selected 
+          for execution when available:
+          - TLsos: executes siga/sosreport/sysreport on Linux systems
+                   can be executed only as root user
+          - TLjroc: collects JRockit data, generates reports, and displays 
+                    key information about the results for Oracle JRockit 
+                    R27 and later
+          - TLepm: collects Enterprise Performance Management Validation 
+                   Information  
+
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 1&nbsp;  - &nbsp;<a href="#" id="menumap42-show" class="showLink" onclick="showHide('menumap42');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap42" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>1:command:rda_320</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>1</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_320</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_320">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap42-hide" class="hideLink" onclick="showHide('menumap42');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 2&nbsp;  - &nbsp;<a href="#" id="menumap43-show" class="showLink" onclick="showHide('menumap43');return false;"><b>[+]</b> Show Command Details</a>
+                  <div id="menumap43" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>2:command:rda_310</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>2</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">command:</td>
+                           <td>rda_310</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#rda_310">See related Command</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap43-hide" class="hideLink" onclick="showHide('menumap43');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: 3&nbsp;  - &nbsp;<a href="#" id="menumap44-show" class="showLink" onclick="showHide('menumap44');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap44" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>3:menu:PerfTools</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>3</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>PerfTools</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#PerfTools">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap44-hide" class="hideLink" onclick="showHide('menumap44');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap45-show" class="showLink" onclick="showHide('menumap45');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap45" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap45-hide" class="hideLink" onclick="showHide('menumap45');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap46-show" class="showLink" onclick="showHide('menumap46');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap46" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap46-hide" class="hideLink" onclick="showHide('menumap46');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table border="1" width="700" summary="Table for each menu section within *menus.xml">
+            <tr>
+               <td class="td_column" align="center" colspan="2"><a name="PerfTools"></a>PerfTools - TBD Performance: Tools</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>  TBD - Command not yet developed
+          
+  Select one of the following options:
+  
+    (M)ain    (B)ack    (H)elp   (E)xit  
+      
+   </pre>
+                  <p class="c9"><a href="#" id="help11-show" class="showLink" onclick="toggleHelp('help11');"><b>[+]</b> Toggle Help</a>
+                     <div id="help11" class="more"><b>Showing Menu Help:</b>
+                        <pre>  TBD - command not yet developed
+   </pre>
+                     </div>
+                  </p>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: M&nbsp;  - &nbsp;<a href="#" id="menumap47-show" class="showLink" onclick="showHide('menumap47');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap47" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>M:menu:main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>M</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>main</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#main">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap47-hide" class="hideLink" onclick="showHide('menumap47');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+            <tr>
+               <td class="td_column" width="45%">Menu Option: B&nbsp;  - &nbsp;<a href="#" id="menumap48-show" class="showLink" onclick="showHide('menumap48');return false;"><b>[+]</b> Show Menu Details</a>
+                  <div id="menumap48" class="more2">
+                     <table border="1" width="55%" summary="Table for each menu_map Element">
+                        <tr>
+                           <td class="td_column">menu_map element:</td>
+                           <td>B:menu:Performance</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">key press:</td>
+                           <td>B</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">menu:</td>
+                           <td>Performance</td>
+                        </tr>
+                        <tr>
+                           <td class="td_column">Note:</td>
+                           <td><a href="#Performance">See related Menu</a>
+                           </td>
+                        </tr>
+                     </table>
+                     <p align="left"><a href="#" id="menumap48-hide" class="hideLink" onclick="showHide('menumap48');return false;"><b>[-]</b> Hide Details</a>
+                     </p>
+                  </div>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top </a>|<a href="#" onClick="history.back();return false;"> Back</a>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_309"></a>rda_309</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE for RAC - linux only</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This test module executes the "P400RAC_lnx" rule set health checks. 
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "P400RAC_lnx" rules set as a report
+    o Removes all previous reports for the rule set.
+    o The exit code is O when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+      
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_hcve=P400RAC</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_310"></a>rda_310</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Network Information</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    Runs NET module to collect network information.
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Shows a summary of the collection process
+    o Generates a collection of files in the "NET" subdirectory under 
+      the Diagnostic Assistant output directory
+        
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_module=NET</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_311"></a>rda_311</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Operating System Information</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    Runs OS modules to collect operating system information.
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Shows a summary of the collection process
+    o Generates a collection of files in the "OS" subdirectory under 
+      the Diagnostic Assistant output directory
+        
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_module=OS</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_319"></a>rda_319</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Operating System and Network Information</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    Runs 2 modules to collect database performance information:
+      o  OS  - Collects Operating System information
+      o  NET - Collects network information
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Shows a summary of the collection process
+    o Generates a collection of files in the "OS_NET" subdirectory under 
+      the Diagnostic Assistant output directory
+        
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_module=OS,NET</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_320"></a>rda_320</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Performance Information</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    Runs PERF module to collect performance information.
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Shows a summary of the collection process
+    o Generates a collection of files in the "PERF" subdirectory under 
+      the Diagnostic Assistant output directory
+        
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_module=PERF</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_340"></a>rda_340</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE Pre-Install: 10g RDBMS (10.1.x)</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This test module is targeted at 10g RDBMS (10.1.x) and executes 
+    the "A200DB10R1_&lt;platform&gt;" rule set preinstall health checks.
+    This command is currently valid for the following platforms:
+      o AIX, HP-UX, Linux, Apple MAC OS X, Tru64, and Sun Solaris
+    A message will display if run on a platform not listed above.
+      
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A200DB10R1_&lt;platform&gt;" rules set as
+      a report
+    o Removes all previous reports for the rule set 
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_hcve=A200DB10R1</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_341"></a>rda_341</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE Pre-Install: 10g RDBMS (10.2.x)</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary 
+    This test module is targeted at 10g RDBMS (10.2.x) and executes 
+    the "A200DB10R2_&lt;platform&gt;" rule set pre-install health checks.
+    This command is currently valid for the following platforms:
+      o AIX, HP-UX, Linux, and Sun Solaris
+    A message will display if run on a platform not listed above.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A200DB10R2_&lt;platform&gt;" rules set as a report
+    o Removes all previous reports for the rule set
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_hcve=A200DB10R2</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_350"></a>rda_350</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE Pre-Install: 11g RDBMS (11.1.x)</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary 
+    This test module is targeted at 11g RDBMS (11.1.x) and executes 
+    the "A200DB11R1_&lt;platform&gt;" rule set preinstall health checks.
+    This command is currently valid for the following platforms:
+      o AIX, HP-UX, Linux, and Sun Solaris
+    A message will display if run on a platform not listed above.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A200DB11R1_&lt;platform&gt;" rules set as a report
+    o Removes all previous reports for the rule set 
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_hcve=A200DB11R1</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_351"></a>rda_351</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE Pre-Install: 11g RDBMS (11.2.x)</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary 
+    This test module is targeted at 11g RDBMS (11.2.x) and executes 
+    the "A200DB11R2_&lt;platform&gt;" rule set preinstall health checks.
+    This command is currently valid for the following platforms:
+      o AIX, HP-UX, Linux, Sun Solaris, and Windows
+    A message will display if run on a platform not listed above.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A200DB11R2_&lt;platform&gt;" rules set as a report
+    o Removes all previous reports for the rule set 
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_hcve=A200DB11R2</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_359"></a>rda_359</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE Pre-Install: OAS 10g R2 (10.1.3)</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This test module is targeted at Oracle Application Server 10g R2 (10.1.3)
+    and executes the "A300AS1013_&lt;platform&gt;" rule set preinstall health checks.
+    This command is currently valid for the following platforms:
+      o Linux
+    A message will display if run on a platform not listed above.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A300AS1013_&lt;platform&gt;" rules set as 
+      a report
+    o Removes all previous reports for the rule set 
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_hcve=A300AS1013</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_360"></a>rda_360</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE Pre-Install: OAS 10g (9.0.x)</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This pre-install check is targeted at Oracle Application Server 10g (9.0.x)
+    and executes the "A300AS0904_&lt;platform&gt;" rule set preinstall health checks.
+    This command is currently valid for the following platforms:
+      o AIX, HP-UX, Linux and Sun Solaris
+    A message will display if run on a platform not listed above.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A300AS0904_&lt;platform&gt;" rules set as a report
+    o Removes all previous reports for the rule set 
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_hcve=A300AS0904</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_361"></a>rda_361</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE Pre-Install: OAS 10gR2 (10.1.2)</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This pre-install check is targeted at Oracle Application Server 
+    10g R2 (10.1.2) and executes the "A300AS1012_&lt;platform&gt;" rule set.
+    This command is currently valid for the following platforms:
+      o HP-UX, Linux and Sun Solaris
+    A message will display if run on a platform not listed above.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A300AS1012_&lt;platform&gt;" rules set as a report
+    o Removes all previous reports for the rule set 
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_hcve=A300AS1012</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_365"></a>rda_365</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE Pre-Install: FM 11gR1 (11.1.1)</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This pre-install check is targeted at Oracle Fusion Middleware 
+    11g R1 (11.1.1) and executes the "A300FM1111_&lt;platform&gt;" rule set.
+    This command is currently valid for the following platforms:
+      o AIX, HP-UX, Linux, Sun Solaris and Windows
+    A message will display if run on a platform not listed above.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A300FM1111_&lt;platform&gt;" rules set as a report
+    o Removes all previous reports for the rule set 
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_hcve=A300FM1111</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_372"></a>rda_372</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE Post-Install: Oracle Portal</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This post-install check is targeted at Oracle Portal and executes 
+    the "A305PDA_gen" rule set.
+    This command is valid for all platforms.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A305PDA_gen" rules set as a report
+    o Removes all previous reports for the rule set 
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>custom -yT hcve:A305PDA_gen</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_375"></a>rda_375</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE Pre-Install: OIM 10g (10.1.4)</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This pre-install check is targeted at Oracle Identity Management 
+    10g (10.1.4) and executes the "A360IM1014_&lt;platform&gt;" rule set.
+    This command is currently valid for the following platforms:
+      o AIX, HP-UX, Linux, and Sun Solaris
+    A message will display if run on a platform not listed above.
+    
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A360IM1014_&lt;platform&gt;" rules set as a report
+    o Removes all previous reports for the rule set 
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_hcve=A360IM1014</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_380"></a>rda_380</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE Pre-Install: EBS 11i(11.5.10)</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This pre-install check is targeted at Oracle E-Business Suite 
+    Release 11i (11.5.10) and executes the "A500EB11510_&lt;platform&gt;" 
+    rule set.
+    This command is currently valid for the following platforms:
+      o AIX, HP-UX, Linux, and Sun Solaris
+    A message will display if run on a platform not listed above.
+
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A500EB11510_&lt;platform&gt;" rules set as a report
+    o Removes all previous reports for the rule set 
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_hcve=A500EB11510</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="rda_382"></a>rda_382</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>Rda</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>HCVE Pre-Install: EBS R12(12.1.1)</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    This pre-install check is targeted at Oracle E-Business Suite Release 
+    12 (12.1.1) and executes the "A500EB1211_&lt;platform&gt;" rule set.
+    This command is currently valid for the following platforms:
+      o AIX, HP-UX, Linux, and Sun Solaris
+    A message will display if run on a platform not listed above.
+
+  Input Requirements
+    o None
+    
+  Output Details
+    o Produces the documentation of the "A500EB1211_&lt;platform&gt;" rules set as a report
+    o Removes all previous reports for the rule set 
+    o The exit code is 0 when tests are successful, 1 in case of failures, or 
+      2 when it detects execution errors
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>run_hcve=A500EB1211</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <table id="command_list" class="table-border" width="700" summary="List of command for this menu" border="1">
+            <tr>
+               <td class="td_column2" colspan="2"><b>COMMAND: </b><a name="os_test"></a>os_test</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TYPE:</td>
+               <td>OS</td>
+            </tr>
+            <tr>
+               <td class="td_column">COMMAND TITLE:</td>
+               <td>Match Directory Files</td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND DESCRIPTION:</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>
+  Command Summary
+    Just Testing os command prompt to show directory
+
+  Input Requirements
+    o None
+    
+  Output Details
+    o bla bla bla
+  
+    </pre>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">command_prompt1<b>: </b>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2"><i>PATH|Please enter dir path to list|.</i>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">command_prompt2<b>: </b>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2"><i>FILTER|Please enter file match filter|.txt</i>
+               </td>
+            </tr>
+            <tr>
+               <td colspan="2" class="td_column">COMMAND ARGUMENT(S):</td>
+            </tr>
+            <tr>
+               <td colspan="2">
+                  <pre>ls %%PATH%% | grep %%FILTER%%</pre>
+               </td>
+            </tr>
+         </table><a href="#TOP">Top</a>|<a href="#" onClick="history.back();return false;">Back</a>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+         <p></p>
+      </div>
+   </body>
+</html>
